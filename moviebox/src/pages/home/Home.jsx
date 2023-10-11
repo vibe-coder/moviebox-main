@@ -13,7 +13,6 @@ function Home() {
       <Section3/>
       <Section4/>
       <Section5/>
-      
     </section>
   )
 }
