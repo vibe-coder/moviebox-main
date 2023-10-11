@@ -16,12 +16,19 @@ module.exports = {
       'bubble-gum': '#ff77e9',
       'bermuda': '#78dcca',
       'blue-1': "#082f49",
-      'blue-2':'#0369a1'
+      'blue-2':'#0369a1',
+      'yellow-1': '#facc15',
+      'neutral': '#262626',
+      'neutral-2': '#3f3f46'
     },
     
     fontFamily: {
       sans: ['Hind', 'sans-serif'],
     },
+
+    // height: {
+    //   '80': '80vh',
+    // }
   },
   plugins: [],
 }
