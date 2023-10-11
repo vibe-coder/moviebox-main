@@ -5,7 +5,7 @@ function Section1() {
   return (
     <section className='h-[85vh] bg-metal flex items-center  relative'>
       
-      <img src={bgPoster} alt='background' className='absolute w-screen h-full object-cover ob'/>
+      <img src={bgPoster} alt='background' className='absolute w-screen h-full object-cover object-center'/>
       
       {/* Information Wrapper */}
       
