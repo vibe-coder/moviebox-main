@@ -19,16 +19,25 @@ module.exports = {
       'blue-2':'#0369a1',
       'yellow-1': '#facc15',
       'neutral': '#262626',
-      'neutral-2': '#3f3f46'
+      'neutral-2': '#3f3f46',
+      'transparetNeutral': 'rgba(0, 0, 0, .3)'
     },
     
     fontFamily: {
       sans: ['Hind', 'sans-serif'],
     },
 
-    // height: {
-    //   '80': '80vh',
-    // }
+    fontWeight: {
+      hairline: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      'extra-bold': '800',
+      black: '900',
+    }
   },
   plugins: [],
 }
