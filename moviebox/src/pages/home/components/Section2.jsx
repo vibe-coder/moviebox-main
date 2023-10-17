@@ -8,18 +8,18 @@ function Section2() {
 
       {/* ----------------------- Category Button Selection ------------------- */}
       <div className='flex border-b border-neutral mb-16'>
-        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>Latest Trailers</button>
-        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>Coming Soon</button>
-        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>In Thearters</button>
-        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>Realease Calendar</button>
-        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>Box Office</button>
-        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>Showtimes and Tickets</button>
+        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>Movies</button>
+        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>TV Series</button>
+        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>Popular Downloads</button>
+        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>Top Rated Movies</button>
+        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>Top Rated Series</button>
+        <button className='h-16 px-3 font-sans text-white border-b-2 border-transparent hover:border-yellow-1 z-10'>Premium</button>
         <div className=' flex-1 flex justify-end items-center'><button className='h-8 w-28 rounded font-sans text-yellow-1'>View All</button></div>
       </div>
 
 
       {/* ----------------------- Movie Category --------------------------- */}
-      <div className='flex justify-between gap-6 mb-6'>
+      <div className='flex justify-between gap-16 mb-6'>
 
         {/* Single movie card */}
         <div className=' h-[29rem] flex-col justify-between flex-1 '>
