@@ -3,7 +3,7 @@ import bgPoster from "../../../bg.jpg"
 
 function Section1() {
   return (
-    <section className='h-[85vh] bg-metal flex items-center  relative'>
+    <section className='h-[90vh] bg-metal flex items-center  relative'>
       
       <img src={bgPoster} alt='background' className='absolute w-screen h-full object-cover object-center'/>
       
