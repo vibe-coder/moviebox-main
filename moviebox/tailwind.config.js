@@ -18,9 +18,11 @@ module.exports = {
       'blue-1': "#082f49",
       'blue-2':'#0369a1',
       'yellow-1': '#facc15',
+      'yellow-2': '#eab308',
       'neutral': '#262626',
       'neutral-2': '#3f3f46',
-      'transparetNeutral': 'rgba(0, 0, 0, .3)'
+      'transparetNeutral': 'rgba(0, 0, 0, .3)',
+      'transparentWhite':'rgba(225, 225, 225, .2)'
     },
     
     fontFamily: {
