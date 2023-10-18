@@ -21,7 +21,7 @@ function Section1() {
           </div>
           {/* Button Wrapper */}
           <div className='flex gap-4'>
-          <button className='h-8 w-28 rounded text-black font-medium border border-yellow-1 bg-yellow-1 hover:bg-yellow-2 hover:border-yellow-2'>Watch Trailer</button>
+            <button className='h-8 w-28 rounded text-black font-medium border border-yellow-1 bg-yellow-1 hover:bg-yellow-2 hover:border-yellow-2'>Watch Trailer</button>
             <button className='h-8 w-28 rounded text-white border-2 border-white bg-transparent hover:border-yellow-1'>View Info</button>
             <button className='h-8 rounded text-white bg-transparent hover:text-yellow-1'>+ Favorites</button>
             <button className='h-8 rounded text-white bg-transparent hover:text-yellow-1'><i class="las la-ellipsis-v"></i></button>
