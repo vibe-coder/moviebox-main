@@ -14,7 +14,7 @@ function Section2() {
         <button className='px-3 pb-12 h-6 font-sans text-white border-b-2  border-transparent hover:border-yellow-1 z-10'>Top Rated Movies</button>
         <button className='px-3 pb-12 h-6 font-sans text-white border-b-2  border-transparent hover:border-yellow-1 z-10'>Top Rated Series</button>
         <button className='px-3 pb-12 h-6 font-sans text-white border-b-2  border-transparent hover:border-yellow-1 z-10'>Premium</button>
-        <div className=' flex-1 flex justify-end items-center'><button className='pb-12 h-6 w-28 rounded font-sans text-yellow-1'>View All</button></div>
+        <div className=' flex-1 flex justify-end items-center'><button className='pb-12 h-6 w-28 font-sans text-yellow-1 border-b-2 border-transparent hover:border-yellow-1'>View All</button></div>
       </div>
 
 
