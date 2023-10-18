@@ -9,7 +9,7 @@ function Section4() {
         <button className='px-3 pb-12 h-6 font-sans text-white border-b-2  border-transparent hover:border-yellow-1 z-10'>Celebs</button>
         <button className='px-3 pb-12 h-6 font-sans text-white border-b-2  border-transparent hover:border-yellow-1 z-10'>Events</button>
         <button className='px-3 pb-12 h-6 font-sans text-white border-b-2  border-transparent hover:border-yellow-1 z-10'>News</button>
-        <div className=' flex-1 flex justify-end items-center'><button className='h-8 w-28 rounded font-sans text-yellow-1'>View All</button></div>
+        <div className=' flex-1 flex justify-end items-center'><button className='pb-12 h-6 w-28 font-sans text-yellow-1 border-b-2 border-transparent hover:border-yellow-1'>View All</button></div>
       </div>
 
       {/* Celeb Container */}
