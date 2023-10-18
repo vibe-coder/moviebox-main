@@ -24,12 +24,12 @@ function Section4() {
           {/* Info */}
           <div className=' ml-6'>
             <h1 className='text-yellow-1 font-bold text-lg tracking-widest font-sans mb-2'>Naomi Scott</h1>
-            <h2 className='font-sans mb-2 text-white'>Actress | <span className='text-yellow-1'>Aladdin</span></h2>
-            <p className='font-sans mb-4 text-white font-extralight'>Naomi Scott is a multi-talented actor, singer and songwriter. She stars as "Jasmine"
+            <h2 className='font-sans mb-2 text-neutral-400'>Actress | <span className='text-yellow-1'>Aladdin</span></h2>
+            <p className='font-sans mb-4 text-neutral-300 font-hairline'>Naomi Scott is a multi-talented actor, singer and songwriter. She stars as "Jasmine"
               is Disney's blockbuster live action remake Aladdin (2019), alongside Mena Massoud and Will Smith,
               directed by Guy Ritchie. Disney released the film in May 2019, and it became one of the biggest film of the year.
             </p>
-            <button className='text-white border-b-2 border-white'>More</button>
+            <button className='text-neutral-400 border-b-2 border-neutral-400 hover:text-white'>More</button>
           </div>
         </div>
 
@@ -42,12 +42,12 @@ function Section4() {
           {/* Info */}
           <div className=' ml-6'>
             <h1 className='text-yellow-1 font-bold text-lg tracking-widest font-sans mb-2'>Naomi Scott</h1>
-            <h2 className='font-sans mb-2 text-white'>Actress | <span className='text-yellow-1'>Aladdin</span></h2>
-            <p className='font-sans mb-4 text-white'>Naomi Scott is a multi-talented actor, singer and songwriter. She stars as "Jasmine"
+            <h2 className='font-sans mb-2 text-neutral-400'>Actress | <span className='text-yellow-1'>Aladdin</span></h2>
+            <p className='font-sans mb-4 text-neutral-300'>Naomi Scott is a multi-talented actor, singer and songwriter. She stars as "Jasmine"
               is Disney's blockbuster live action remake Aladdin (2019), alongside Mena Massoud and Will Smith,
               directed by Guy Ritchie. Disney released the film in May 2019, and it became one of the biggest film of the year.
             </p>
-            <button className='text-white border-b-2 border-white'>More</button>
+            <button className='text-neutral-400 border-b-2 border-neutral-400 hover:text-white'>More</button>
           </div>
         </div>
 
