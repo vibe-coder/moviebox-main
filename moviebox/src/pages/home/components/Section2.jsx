@@ -23,36 +23,35 @@ function Section2() {
 
         {/* Single movie card */}
         <div className=' h-[29rem] flex-col justify-between flex-1 '>
-          <div className='w-full h-[90%] bg-purple rounded-lg'>
-            <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg' src={bgPoster} alt='backgroundPoster' />
+          <div className='w-full h-[90%] bg-black rounded-lg'>
+            <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg duration-[0.2s] hover:opacity-[.7]' src={bgPoster} alt='backgroundPoster' />
           </div>
           <div className='h-[10%] flex items-center text-white font-sans'><p>Avengers: Endgame</p></div>
         </div>
 
         {/* Single movie card */}
         <div className=' h-[29rem] flex-col justify-between flex-1 '>
-          <div className='w-full h-[90%] bg-purple rounded-lg'>
-            <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg' src={bgPoster} alt='backgroundPoster' />
+          <div className='w-full h-[90%] bg-black rounded-lg'>
+            <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg duration-[0.2s] hover:opacity-[.7]' src={bgPoster} alt='backgroundPoster' />
           </div>
           <div className='h-[10%] flex items-center text-white font-sans'><p>Avengers: Endgame</p></div>
         </div>
 
         {/* Single movie card */}
         <div className=' h-[29rem] flex-col justify-between flex-1 '>
-          <div className='w-full h-[90%] bg-purple rounded-lg'>
-            <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg' src={bgPoster} alt='backgroundPoster' />
+          <div className='w-full h-[90%] bg-black rounded-lg'>
+            <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg duration-[0.2s] hover:opacity-[.7]' src={bgPoster} alt='backgroundPoster' />
           </div>
           <div className='h-[10%] flex items-center text-white font-sans'><p>Avengers: Endgame</p></div>
         </div>
 
         {/* Single movie card */}
         <div className=' h-[29rem] flex-col justify-between flex-1 '>
-          <div className='w-full h-[90%] bg-purple rounded-lg'>
-            <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg' src={bgPoster} alt='backgroundPoster' />
+          <div className='w-full h-[90%] bg-black rounded-lg'>
+            <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg duration-[0.2s] hover:opacity-[.7]' src={bgPoster} alt='backgroundPoster' />
           </div>
           <div className='h-[10%] flex items-center text-white font-sans'><p>Avengers: Endgame</p></div>
         </div>
-
       </div>
 
 
