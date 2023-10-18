@@ -21,6 +21,7 @@ module.exports = {
       'yellow-2': '#eab308',
       'neutral': '#262626',
       'neutral-2': '#3f3f46',
+      'neutral-400': '#a3a3a3',
       'transparetNeutral': 'rgba(0, 0, 0, .3)',
       'transparentWhite':'rgba(225, 225, 225, .2)'
     },
