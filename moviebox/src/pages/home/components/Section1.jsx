@@ -63,7 +63,6 @@ const Section1 = () => {
      })
     .catch((error) => {console.log(error)})
   }
-
   useEffect(()=>{
     // fetchData()
   }, [setMovieData])
@@ -72,16 +71,16 @@ const Section1 = () => {
   let imgPref = "https://image.tmdb.org/t/p/w500/"
 
   return (
-    <section className='h-[95vh] bg-metal flex items-center  relative'>
+    <section className='h-[95vh] w-screen bg-metal flex items-center  relative'>
       
       <img src = {imgPref + movieData.backdrop_path} alt='background' className='absolute w-screen h-full object-cover object-center'/>
       
       {/* Information Wrapper */}
       
-      <div className='flex h-full w-full items-center px-16 z-[1] bg-gradient-to-t from-black to-transparent'>
-        <div className='mt-56'>
+      <div className='flex h-full w-full items-center px-6 z-[1] bg-gradient-to-t from-black to-transparent'>
+        <div className='mt-[400px]'>
           {/* Title */}
-          <h1 className='text-white font-bold font-sans text-6xl m-0'>{movieData.original_title}</h1>
+          <h1 className='text-white font-bold font-sans text-5xl m-0'>{movieData.original_title}</h1>
           {/* Description */}
           <p className='font-sans font-hairline text-md m-0 text-white'>Action, Adventure, Comedy | {movieData.release_date} (USA)</p>
           {/* Rating */}
@@ -89,7 +88,7 @@ const Section1 = () => {
             <div className='border-2 border-yellow-1 w-12 rounded flex justify-center items-center'>4.0</div>
           </div>
           {/* Button Wrapper */}
-          <div className='flex gap-4'>
+          <div className='flex gap-4 flex-wrap'>
             <button className='h-8 w-28 rounded text-black font-medium border border-yellow-1 bg-yellow-1 hover:bg-yellow-2 hover:border-yellow-2'>Watch Trailer</button>
             <button className='h-8 w-28 rounded text-white border-2 border-white bg-transparent hover:border-yellow-1'>View Info</button>
             <button className='h-8 rounded text-white bg-transparent hover:text-yellow-1'>+ Favorites</button>
