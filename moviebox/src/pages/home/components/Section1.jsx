@@ -71,29 +71,29 @@ const Section1 = () => {
   let imgPref = "https://image.tmdb.org/t/p/w500/"
 
   return (
-    <section className='h-[95vh] w-screen bg-metal flex items-center  relative'>
+    <section className='h-[100vh] w-screen bg-metal flex items-center relative'>
       
       <img src = {imgPref + movieData.backdrop_path} alt='background' className='absolute w-screen h-full object-cover object-center'/>
       
       {/* Information Wrapper */}
       
-      <div className='flex h-full w-full items-center px-6 z-[1] bg-gradient-to-t from-black to-transparent'>
-        <div className='mt-[300px]'>
+      <div className='flex h-full w-full items-center px-6 z-[1] bg-gradient-to-t from-black to-transparent md:px-16'>
+        <div className='mt-[300px] md:w-[80%]'>
           {/* Title */}
-          <h1 className='text-white font-bold font-sans text-4xl m-0'>{movieData.original_title}</h1>
+          <h1 className='text-white font-bold font-sans text-4xl m-0 md:text-7xl'>{movieData.original_title}</h1>
           {/* Description */}
-          <p className='font-sans text-sm m-0 text-neutral-400'>Action, Adventure, Comedy | {movieData.release_date} (USA)</p>
+          <p className='font-sans text-sm m-0 text-neutral-400 md:text-xl'>Action, Adventure, Comedy | {movieData.release_date} (USA)</p>
           {/* Overview */}
-          <p className='text-white text-sm font-sans mt-5 font-hairline'>{movieData.overview}</p>
+          <p className='text-white text-sm font-sans mt-5 font-hairline md:text-lg'>{movieData.overview}</p>
           {/* Rating */}
           <div className='my-6 text-white'>
-            <div className='border-2 border-yellow-1 w-12 rounded flex justify-center items-center'>4.0</div>
+            <div className='border-2 border-yellow-1 w-12 rounded flex justify-center items-center md:h-9 md:w-14'>4.0</div>
           </div>
           {/* Button Wrapper */}
           <div className='flex gap-4 flex-wrap'>
-            <button className='h-8 w-28 rounded text-black font-medium border border-yellow-1 bg-yellow-1 hover:bg-yellow-2 hover:border-yellow-2'>Watch Trailer</button>
-            <button className='h-8 w-28 rounded text-white border-2 border-white bg-transparent hover:border-yellow-1'>View Info</button>
-            <button className='h-8 rounded text-white bg-transparent hover:text-yellow-1'>+ Favorites</button>
+            <button className='h-8 w-28 rounded text-black font-medium border border-yellow-1 bg-yellow-1 hover:bg-yellow-2 hover:border-yellow-2 md:h-11 md:w-32'>Watch Trailer</button>
+            <button className='h-8 w-28 rounded text-white border-2 border-white bg-transparent hover:border-yellow-1 md:h-11 md:w-32'>View Info</button>
+            <button className='h-8 rounded text-white bg-transparent hover:text-yellow-1 md:h-11'>+ Favorites</button>
             {/* <button className='h-8 rounded text-white bg-transparent hover:text-yellow-1'><i className="las la-ellipsis-v"></i></button> */}
           </div>
         </div>
