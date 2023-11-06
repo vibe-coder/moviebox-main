@@ -75,8 +75,8 @@ const Section1 = () => {
       <img src = {imgPref + movieData.backdrop_path} alt='background' className='absolute w-screen h-full object-cover object-center'/>
 
       {/* Information Wrapper */}
-      <div className='flex h-full w-full items-center px-6 z-[1] bg-gradient-to-t from-black to-transparent md:px-16'>
-        <div className='mt-[300px] md:w-[80%] lg:w-[40%]'>
+      <div className='flex h-full w-full items-center px-6 z-[1] bg-gradient-to-t from-black to-transparent md:px-16 lg:px-28'>
+        <div className='mt-[200px] md:w-[80%] lg:w-[50%]'>
           {/* Title */}
           <h1 className='text-white font-bold font-sans text-4xl m-0 md:text-7xl'>{movieData.original_title}</h1>
           {/* Description */}
