@@ -71,14 +71,12 @@ const Section1 = () => {
   let imgPref = "https://image.tmdb.org/t/p/w500/"
 
   return (
-    <section className='h-[100vh] w-screen bg-metal flex items-center relative'>
-      
+    <section className='h-screen bg-purple flex items-center relative'>      
       <img src = {imgPref + movieData.backdrop_path} alt='background' className='absolute w-screen h-full object-cover object-center'/>
-      
+
       {/* Information Wrapper */}
-      
       <div className='flex h-full w-full items-center px-6 z-[1] bg-gradient-to-t from-black to-transparent md:px-16'>
-        <div className='mt-[300px] md:w-[80%]'>
+        <div className='mt-[300px] md:w-[80%] lg:w-[40%]'>
           {/* Title */}
           <h1 className='text-white font-bold font-sans text-4xl m-0 md:text-7xl'>{movieData.original_title}</h1>
           {/* Description */}
