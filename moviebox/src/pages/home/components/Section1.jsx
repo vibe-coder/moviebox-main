@@ -80,11 +80,11 @@ const Section1 = () => {
       <div className='flex h-full w-full items-center px-6 z-[1] bg-gradient-to-t from-black to-transparent'>
         <div className='mt-[300px]'>
           {/* Title */}
-          <h1 className='text-white font-bold font-sans text-5xl m-0'>{movieData.original_title}</h1>
+          <h1 className='text-white font-bold font-sans text-4xl m-0'>{movieData.original_title}</h1>
           {/* Description */}
-          <p className='font-sans text-md m-0 text-neutral-400'>Action, Adventure, Comedy | {movieData.release_date} (USA)</p>
+          <p className='font-sans text-sm m-0 text-neutral-400'>Action, Adventure, Comedy | {movieData.release_date} (USA)</p>
           {/* Overview */}
-          <p className='text-white font-sans mt-5 font-hairline'>{movieData.overview}</p>
+          <p className='text-white text-sm font-sans mt-5 font-hairline'>{movieData.overview}</p>
           {/* Rating */}
           <div className='my-6 text-white'>
             <div className='border-2 border-yellow-1 w-12 rounded flex justify-center items-center'>4.0</div>
