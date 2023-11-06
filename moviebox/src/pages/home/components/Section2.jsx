@@ -27,37 +27,47 @@ function Section2() {
       {/* ----------------------- Movie Category --------------------------- */}
       <div className='grid grid-cols-2 gap-x-4 gap-y-6 mb-12 md:grid-cols-3'>
         {/* Single movie card */}
-        <div className=' h-[15rem] w-[100%] flex-col justify-between flex-1 '>
+        <div className=' h-[15rem] w-[100%] flex-col justify-between'>
           <div className='w-full h-[90%] bg-black rounded-lg'>
             <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg duration-[0.2s] hover:opacity-[.7]' src={bgPoster} alt='backgroundPoster' />
           </div>
           <div className='h-[10%] mt-2 flex items-center text-neutral-300 font-sans '><p className='md:text-lg'>Avengers: Endgame</p></div>
         </div>
 
-        <div className=' h-[15rem] w-[100%] flex-col justify-between flex-1 '>
+        <div className=' h-[15rem] w-[100%] flex-col justify-between'>
           <div className='w-full h-[90%] bg-black rounded-lg'>
             <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg duration-[0.2s] hover:opacity-[.7]' src={bgPoster} alt='backgroundPoster' />
           </div>
           <div className='h-[10%] mt-2 flex items-center text-neutral-300 font-sans '><p className='md:text-lg'>Avengers: Endgame</p></div>
         </div>
 
-        <div className=' h-[15rem] w-[100%] flex-col justify-between flex-1 '>
+        <div className=' h-[15rem] w-[100%] flex-col justify-between'>
           <div className='w-full h-[90%] bg-black rounded-lg'>
             <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg duration-[0.2s] hover:opacity-[.7]' src={bgPoster} alt='backgroundPoster' />
           </div>
           <div className='h-[10%] mt-2 flex items-center text-neutral-300 font-sans '><p className='md:text-lg'>Avengers: Endgame</p></div>
         </div>
 
-        <div className=' h-[15rem] w-[100%] flex-col justify-between flex-1 '>
+        <div className=' h-[15rem] w-[100%] flex-col justify-between'>
           <div className='w-full h-[90%] bg-black rounded-lg'>
             <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg duration-[0.2s] hover:opacity-[.7]' src={bgPoster} alt='backgroundPoster' />
           </div>
           <div className='h-[10%] mt-2 flex items-center text-neutral-300 font-sans '><p className='md:text-lg'>Avengers: Endgame</p></div>
         </div>
 
+        <div className=' h-[15rem] w-[100%] flex-col justify-between'>
+          <div className='w-full h-[90%] bg-black rounded-lg'>
+            <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg duration-[0.2s] hover:opacity-[.7]' src={bgPoster} alt='backgroundPoster' />
+          </div>
+          <div className='h-[10%] mt-2 flex items-center text-neutral-300 font-sans '><p className='md:text-lg'>Avengers: Endgame</p></div>
+        </div>
 
-
-
+        <div className=' h-[15rem] w-[100%] flex-col justify-between'>
+          <div className='w-full h-[90%] bg-black rounded-lg'>
+            <img className='h-full cursor-pointer w-full object-cover object-center rounded-lg duration-[0.2s] hover:opacity-[.7]' src={bgPoster} alt='backgroundPoster' />
+          </div>
+          <div className='h-[10%] mt-2 flex items-center text-neutral-300 font-sans '><p className='md:text-lg'>Avengers: Endgame</p></div>
+        </div>
       </div>
 
       {/* --------------------- Movie Banner Description ---------------------*/}
