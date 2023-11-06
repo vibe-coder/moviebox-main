@@ -74,7 +74,7 @@ function Section2() {
       <div id='movieBanner' className='flex flex-col gap-3 md:flex-col'>
 
         {/* Left Section */}
-        <div className='w-full relative rounded-lg h-[300px]'>
+        <div className='w-full relative rounded-lg h-[300px] md:h-[400px]'>
           <img src={bgPoster} alt="bacground poster" className='object-cover object-center w-full h-full absolute rounded-lg z-[1]'/>
 
           <div className='absolute bg-transparetNeutral w-full h-full flex items-center py-6 pl-6 z-[2]'>
