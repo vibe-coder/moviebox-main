@@ -3,7 +3,7 @@ import bgPoster from "../../../bg.jpg"
 
 function Section3() {
   return (
-    <section className='bg-black px-6 pb-16 mt-20 md:px-16 lg:px-28'>
+    <section className=' px-6 mt-40 md:px-16 lg:px-28'>
       {/* ----------------------- Category Button Selection ------------------- */}
       <div className='flex border-b border-neutral mb-10 overflow-scroll no-scrollbar lg:overflow-visible'>
         <div className='flex justify-between lg:justify-between overflow-hidden'>

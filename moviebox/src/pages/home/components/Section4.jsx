@@ -3,7 +3,7 @@ import bgPoster from "../../../bg.jpg"
 
 function Section4() {
   return (
-    <section className='bg-black px-6 pb-32 md:px-16 lg:px-28'>
+    <section className='mt-40 px-6 pb-32 md:px-16 lg:px-28'>
       {/* ----------------------- Category Button Selection ------------------- */}
       <div className='flex border-b border-neutral mb-12'>
         <button className='px-3 pb-12 h-6 font-sans text-white border-b-2  border-transparent hover:border-yellow-1 z-10 md:text-lg'>Celebs</button>
