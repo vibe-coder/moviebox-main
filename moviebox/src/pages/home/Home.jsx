@@ -6,7 +6,7 @@ import Section4 from './components/Section4'
 
 function Home() {
   return (
-    <section className='w-screen'>
+    <section>
       <Section1/>
       <Section2/>
       <Section3/>
