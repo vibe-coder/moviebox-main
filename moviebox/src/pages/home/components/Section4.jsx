@@ -13,7 +13,7 @@ function Section4() {
       </div>
 
       {/* Celeb Container */}
-      <div className='grid grid-cols-1 gap-6'>
+      <div className='grid grid-cols-1 gap-6 lg:grid-cols-2'>
 
         {/* Single Celeb Container*/}
         <div className='flex col-span-1'>
