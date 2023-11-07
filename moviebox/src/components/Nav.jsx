@@ -20,7 +20,7 @@ function Nav() {
         </label>
 
         <Link to="/category">
-          <button className='h-10 w-20 rounded text-black font-bold border border-yellow-1 bg-yellow-1 hover:bg-yellow-2 hover:border-yellow-2 md:w-32'>
+          <button className='transition ease-in-out h-10 w-20 rounded text-black font-bold border border-yellow-1 bg-yellow-1 hover:bg-white hover:border-white md:w-32'>
             Category
           </button>
         </Link>
