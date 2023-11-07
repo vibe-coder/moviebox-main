@@ -1,6 +1,5 @@
 import React from 'react'
 import bgPoster from "../../../bg.jpg"
-import "./scss/Section-2.scss"
 
 function Section2() {
   return (
