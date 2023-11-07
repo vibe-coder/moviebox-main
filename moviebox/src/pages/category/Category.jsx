@@ -6,7 +6,7 @@ function Category() {
     <section className='bg-black pb-28 pt-28'>
 
       {/* Category Buttons */}
-      <div className="bg-neutral p-6 px-16 grid grid-cols-12 gap-6 mb-24">
+      <div className="bg-neutral p-6 px-16 grid grid-cols-12 gap-6 mb-24 mt-6">
         <button className='bg-yellow-1 hover:bg-yellow-2 active:text-neutral-2 flex justify-center items-center py-1 px-6 font-sans font-medium text-lg tracking-wider'>Action</button>
         <button className='bg-yellow-1 hover:bg-yellow-2 active:text-neutral-2 flex justify-center items-center py-1 px-6 font-sans font-medium text-lg tracking-wider'>Action</button>
         <button className='bg-yellow-1 hover:bg-yellow-2 active:text-neutral-2 flex justify-center items-center py-1 px-6 font-sans font-medium text-lg tracking-wider'>Action</button>
