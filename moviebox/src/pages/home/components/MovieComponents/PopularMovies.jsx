@@ -18,7 +18,7 @@ function PopularMovies() {
     fetch(url, options)
     .then((response) => response.json())
     .then((data) => {
-      let newPopular = data.results.slice(0, -14)
+      let newPopular = data.results
       setPopularMovies(newPopular)
      })
     .catch((error) => {console.log(error)})

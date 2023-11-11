@@ -19,7 +19,7 @@ function UpcomingMovies() {
     .then((data) => {
       console.log(data.results)    
       
-      let newUpcoming = data.results.slice(0, -14)
+      let newUpcoming = data.results
       setUpcomingMovies(newUpcoming)
      })
     .catch((error) => {console.log(error)})
