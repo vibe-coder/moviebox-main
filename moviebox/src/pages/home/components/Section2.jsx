@@ -1,5 +1,5 @@
 import React from 'react'
-import MovieTabs from './movieTabs';
+import MovieTabs from './MovieTabs';
 
 function Section2() {
   return (
