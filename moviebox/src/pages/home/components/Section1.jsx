@@ -1,5 +1,4 @@
 import React from 'react'
-import bgPoster from "../../../bg.jpg"
 import { useEffect, useState} from 'react';
 
 
@@ -15,22 +14,22 @@ const Section1 = () => {
   };  
 
   // Placeholder demo
-  let demo = {
-    adult:false,
-    backdrop_path: "/gN79aDbZdaSJkFS1iVA17HplF2X.jpg",
-    genre_ids: (3) [27, 9648, 53],
-    id: 968051,
-    original_language: "en",
-    original_title: "The Nun II",
-    overview: "In 1956 France, a priest is violently murdered, and Sister Irene begins to investigate. She once again comes face-to-face with a powerful evil.",
-    popularity: 1577.995,
-    poster_path: "/5gzzkR7y3hnY8AD1wXjCnVlHba5.jpg",
-    release_date:"2023-09-06",
-    title: "The Nun II",
-    video: false,
-    vote_average: 6.963,
-    vote_count: 125
-  }
+  // let demo = {
+  //   adult:false,
+  //   backdrop_path: "/gN79aDbZdaSJkFS1iVA17HplF2X.jpg",
+  //   genre_ids: (3) [27, 9648, 53],
+  //   id: 968051,
+  //   original_language: "en",
+  //   original_title: "The Nun II",
+  //   overview: "In 1956 France, a priest is violently murdered, and Sister Irene begins to investigate. She once again comes face-to-face with a powerful evil.",
+  //   popularity: 1577.995,
+  //   poster_path: "/5gzzkR7y3hnY8AD1wXjCnVlHba5.jpg",
+  //   release_date:"2023-09-06",
+  //   title: "The Nun II",
+  //   video: false,
+  //   vote_average: 6.963,
+  //   vote_count: 125
+  // }
 
   const [movieData, setMovieData] = useState([])
   const [index, setIndex] = React.useState(0);
@@ -51,7 +50,9 @@ const Section1 = () => {
   // Calling fetchData
   useEffect(()=>{
     fetchData()
-  }, [setMovieData])
+  },
+  // [setMovieData]
+  )
 
   // Slide show effect
   useEffect(() => {
@@ -64,7 +65,9 @@ const Section1 = () => {
     );
 
     return () => {};
-  }, [index]);
+  }, 
+  [index]
+  );
 
 
 
@@ -75,7 +78,7 @@ const Section1 = () => {
       <div className={`slideshowSlider relative w-full h-full whitespace-nowrap overflow-scroll no-scrollbar`} >
         {movieData.map((data) => {
           return(
-            <div style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }} className='relative w-full h-screen inline-block transition ease-in-out duration-[1000ms]'>
+            <div key={data.id} style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }} className='relative w-full h-screen inline-block transition ease-in-out duration-[1000ms]'>
               <div key={index}>
                 <img src = {imgPref + data.backdrop_path} alt='background' className='absolute w-screen h-screen object-cover object-center'/>
 
