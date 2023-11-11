@@ -53,7 +53,7 @@ export default function MovieTabs() {
 
   return (
     <Box sx={{ width: '100%' }} className="mb-12">
-      <Box sx={{ borderBottom: 1, borderColor: 'divider'}} className="mb-5">
+      <Box sx={{ borderBottom: 1, borderColor: 'divider'}} className="mb-20">
         <Tabs 
         value={value} 
         onChange={handleChange} 
