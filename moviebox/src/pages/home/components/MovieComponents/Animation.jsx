@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 function Animation() {
 
-  const url = 'https://api.themoviedb.org/3/movie/animation?language=en-US&page=1'
+  const url = 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=28%2C12%2C16%2C878'
   const options = {
     method: 'GET',
     headers: {
