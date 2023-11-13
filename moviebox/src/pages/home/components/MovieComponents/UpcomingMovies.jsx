@@ -37,7 +37,7 @@ function UpcomingMovies() {
       {/* Single movie card */}
       {upcomingMovies.map((data) => {
         return(
-          <div className=' h-[15rem] w-[100%] flex-col justify-between lg:h-[20rem]' key={data.id}>
+          <div className=' h-[15rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem]' key={data.id}>
             <div className='w-full h-[90%] bg-black'>
               <img className='h-full cursor-pointer w-full object-cover object-center duration-[0.2s] hover:opacity-[.7]' src={imgPref + data.poster_path} alt='backgroundPoster' />
             </div>

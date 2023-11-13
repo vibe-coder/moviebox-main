@@ -35,8 +35,8 @@ function Drama() {
     <div className='grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5'>
       {/* Single movie card */}
       {movies.map((data) => {
-        return(
-          <div className=' h-[15rem] w-[100%] flex-col justify-between lg:h-[20rem]' key={data.id}>
+        return( 
+          <div className=' h-[15rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem]' key={data.id}>
             <div className='w-full h-[90%] bg-black'>
               <img className='h-full cursor-pointer w-full object-cover object-center duration-[0.2s] hover:opacity-[.7]' src={imgPref + data.poster_path} alt='backgroundPoster' />
             </div>
