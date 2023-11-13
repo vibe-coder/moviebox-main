@@ -53,7 +53,7 @@ export default function MovieTabs2() {
 
   return (
     <Box sx={{ width: '100%' }} className="mb-12">
-      <Box sx={{ borderBottom: 1, borderColor: 'divider'}} className="mb-20">
+      <Box sx={{ borderBottom: 1, borderColor: 'divider'}} className="mb-20 lg:overflow-hidden overflow-scroll no-scrollbar md:overflow-scroll md:no-scrollbar">
         <Tabs 
         value={value} 
         onChange={handleChange} 
@@ -62,14 +62,16 @@ export default function MovieTabs2() {
           "& button": {color: 'white', borderRadius: 1},
           "& button.Mui-selected":{color: '#facc15'}
         }}
-        aria-label="basic tabs example">
+        aria-label="basic tabs example"
+        className='w-[200%] flex items-center md:w-[117%] lg:w-[100%]'
+        >
           <Tab label="Action" {...a11yProps(0)} />
           <Tab label="Animation" {...a11yProps(1)}/>
           <Tab label="Comedy" {...a11yProps(2)} />
           <Tab label="Crime" {...a11yProps(3)} />
           <Tab label="Drama" {...a11yProps(4)} />
         
-          <div className='lg:flex justify-end lg:items-center font-sans lg:w-full text-black'>
+          <div className='flex justify-end w-full lg:items-center font-sans lg:w-full text-black md:w-screen md:justify-end md:items-center'>
             <button className='transition ease-in-out h-8 w-28 rounded text-white border-2 border-white bg-transparent hover:border-yellow-1 hover:text-yellow-1 md:h-11 md:w-32'>View All</button>
           </div>
         </Tabs>
