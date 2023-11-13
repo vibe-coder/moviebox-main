@@ -13,21 +13,24 @@ function Section4() {
     }
   };
 
-  const [people, setPeople] = useState([])
+  const [people, setPeople] = useState([ ])
 
-  const fectPeople = () =>{
+  function fetchPeople() {
     fetch(url,options)
         .then((res)=> res.json())
         .then((data) => {
-          console.log(data)
-          setPeople(data)
+          console.log(data.results)
+          let newPeople = data.results
+          setPeople(newPeople)
         })
         .catch((error) => console.log(error))
   }
 
   useEffect(() => {
-    
+    fetchPeople()
   }, [setPeople])
+
+  let imgPref = "https://image.tmdb.org/t/p/original/"
 
   return (
     <section className='mt-40 px-6 pb-32 md:px-16 lg:px-28'>
@@ -38,24 +41,34 @@ function Section4() {
       </div>
 
       {/* Celeb Container */}
-      <div className='grid grid-cols-1 gap-6 lg:grid-cols-2'>
-        {/* Single Celeb Container*/}
-        <div className='flex col-span-1'>
-          {/* Picture */}
-          <div className='w-[1000px] h-[180px] bg-metal md:h-[230px]'>
-            <img className='h-full cursor-pointer w-full object-cover object-center' src={bgPoster} alt='backgroundPoster' />
-          </div>
-          {/* Info */}
-          <div className=' ml-6 overflow-hidden'>
-            <h1 className='text-yellow-1 font-bold text-lg tracking-widest font-sans mb-2 md:text-2xl'>Naomi Scott</h1>
-            <h2 className='font-sans mb-2 text-neutral-400 md:text-lg'>Actress | <span className='text-yellow-1'>Aladdin</span></h2>
-            <p className='font-sans mb-4 text-neutral-300 font-hairline text-ellipsis whitespace-pre-wrap overflow-hidden line-clamp-3 md:text-lg'>Naomi Scott is a multi-talented actor, singer and songwriter. She stars as "Jasmine"
-              is Disney's blockbuster live action remake Aladdin (2019), alongside Mena Massoud and Will Smith,
-              directed by Guy Ritchie. Disney released the film in May 2019, and it became one of the biggest film of the year.
-            </p>
-            <button className='text-neutral-400 border-b-2 border-neutral-400 hover:text-white md:text-lg'>More</button>
-          </div>
-        </div>
+      <div className='grid grid-cols-1 md:grid-cols-1 gap-6 lg:grid-cols-2'>
+        {/* Single Celeb Container*/}       
+          {people.map((data, index) => {
+            return(
+              <div className='flex col-span-1 w-full' key={index}>
+                {/* Picture */}
+                <div className='w-[300px] h-[180px] md:h-[230px]'>
+                  <img className='h-full cursor-pointer w-full object-cover object-center' src={imgPref + data.profile_path} alt='backgroundPoster' />
+                </div>
+                {/* Info */}
+                <div className=' ml-6 overflow-hidden w-full'>
+                  <h1 className='text-yellow-1 font-bold text-lg font-sans md:text-2xl'>{data.name}</h1>
+                  <h3 className='font-sans mb-4 text-white md:text-md'>{data.known_for_department}</h3>
+                  <div>
+                    <p className='text-neutral-300 font-medium'>Works:</p>
+                    {data.known_for.map((data) => {
+                      return(
+                        <ul className='list-disc text-neutral-400 pl-4'>
+                          <li>{data.title}</li>
+                        </ul>
+                      )
+                    })}
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+
       </div>
     </section>
   )
