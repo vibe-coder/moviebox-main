@@ -1,5 +1,5 @@
 import React from 'react'
-import bgPoster from "../../../bg.jpg"
+import bgPoster from "../../../imgHolder.jpg"
 import { useState, useEffect } from 'react';
 
 function Section4() {
@@ -32,6 +32,11 @@ function Section4() {
 
   let imgPref = "https://image.tmdb.org/t/p/original/"
 
+  function hideImg() {
+    document.getElementById("HideImg")
+    .style.display = "none";
+   }
+
   return (
     <section className='mt-40 px-6 pb-32 md:px-16 lg:px-28'>
       {/* ----------------------- Category Button Selection ------------------- */}
@@ -47,8 +52,9 @@ function Section4() {
             return(
               <div className='flex col-span-1 w-full' key={index}>
                 {/* Picture */}
-                <div className='w-[300px] h-[180px] md:h-[230px]'>
-                  <img className='h-full cursor-pointer w-full object-cover object-center' src={imgPref + data.profile_path} alt='backgroundPoster' />
+                <div className='w-[300px] relative h-[180px] md:h-[230px] bg-metal'>
+                  <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={imgPref + data.profile_path} alt='ImgFiller' />
+                  <img className='absolute h-full cursor-pointer w-full object-cover object-center' src={bgPoster} alt='backgroundPoster'/>
                 </div>
                 {/* Info */}
                 <div className=' ml-6 overflow-hidden w-full'>
