@@ -23,6 +23,8 @@ module.exports = {
       'neutral-2': '#3f3f46',
       'neutral-300': '#e5e5e5',
       'neutral-400': '#a3a3a3',
+      'neutral-700': '#404040',
+      'neutral-800': '#262626',
       'transparetNeutral': 'rgba(0, 0, 0, .3)',
       'transparentWhite':'rgba(225, 225, 225, .2)'
     },
