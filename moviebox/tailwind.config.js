@@ -26,6 +26,7 @@ module.exports = {
       'neutral-700': '#404040',
       'neutral-800': '#262626',
       'transparetNeutral': 'rgba(0, 0, 0, .3)',
+      'transparentNeutral-2': 'rgba(0, 0, 0, .8)',
       'transparentWhite':'rgba(225, 225, 225, .2)'
     },
     
