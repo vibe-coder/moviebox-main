@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 
 function Nav() {
   return (
-    <>
-      <nav className="w-100% h-28 flex gap-4 justify-between absolute top-0 left-0 right-0 items-center px-6 z-10 md:gap-8 md:px-16 md:h-40 lg:px-28">
+    <nav className='z-20 relative'>
+      <div className="w-100% h-28 flex gap-4 justify-between absolute top-0 left-0 right-0 items-center px-6 z-10 md:gap-8 md:px-16 md:h-40 lg:px-28">
         <Link className='' to="/">
           <h1 className='text-white text-xl font-bold m-0 flex-1 font-sans focus:outline-none focus-visible:ring md:text-4xl'>
             MOVIE<span className='font-hairline text-yellow-1'>BOX</span>
@@ -24,8 +24,8 @@ function Nav() {
             Category
           </button>
         </Link>
-      </nav>
-    </>
+      </div>
+    </nav>
   )
 }
 
