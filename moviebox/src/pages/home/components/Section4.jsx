@@ -50,7 +50,7 @@ function Section4() {
       {/* ----------------------- Category Button Selection ------------------- */}
       <div className='flex border-b border-neutral mb-12'>
         <button className='px-3 pb-12 h-6 font-sans text-white border-b-2  border-transparent hover:border-yellow-1 z-10 md:text-lg'>Trending Celebs</button>
-        <div className=' flex-1 flex justify-end items-center'><button className='pb-12 h-6 w-28 font-sans text-yellow-1 border-b-2 border-transparent hover:border-yellow-1 md:text-lg'>View All</button></div>
+        {/* <div className=' flex-1 flex justify-end items-center'><button className='pb-12 h-6 w-28 font-sans text-yellow-1 border-b-2 border-transparent hover:border-yellow-1 md:text-lg'>View All</button></div> */}
       </div>
 
 
