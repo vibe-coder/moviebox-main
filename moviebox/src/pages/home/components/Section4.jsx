@@ -33,7 +33,7 @@ function Section4() {
   let imgPref = "https://image.tmdb.org/t/p/original/"
 
 
-  let myArr = [1, 2, 3, 4, 5, 6]
+  let myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   const [arr, setArr] = useState([])
 
   useEffect(() => {
@@ -53,8 +53,11 @@ function Section4() {
         <div className=' flex-1 flex justify-end items-center'><button className='pb-12 h-6 w-28 font-sans text-yellow-1 border-b-2 border-transparent hover:border-yellow-1 md:text-lg'>View All</button></div>
       </div>
 
-      {/* Celeb Container */}
-      <div className='grid grid-cols-1 md:grid-cols-1 gap-6 lg:grid-cols-2'>
+
+      {/* Celeb Wrapper */}
+      <div className='relative'>
+        {/* Celeb Container */}
+        <div className='grid grid-cols-1 md:grid-cols-1 gap-6 lg:grid-cols-2 absolute top-0 w-full z-20 bg-black'>
         {/* Single Celeb Container*/}       
         {people.map((data, index) => {
             return(
@@ -82,9 +85,10 @@ function Section4() {
               </div>
             )
         })}
-      </div>
+        </div>
 
-      <div className='relative grid grid-cols-1 md:grid-cols-1 gap-6 lg:grid-cols-2'>
+        {/* Loading Animation */}
+        <div className='grid grid-cols-1 md:grid-cols-1 gap-6 lg:grid-cols-2'>
       {
         arr.map((data) => {
           return(
@@ -108,8 +112,8 @@ function Section4() {
           )
         })
       }
+        </div>
       </div>
-
     </section>
   )
 }
