@@ -48,7 +48,7 @@ function Section4() {
       {/* Celeb Container */}
       <div className='grid grid-cols-1 md:grid-cols-1 gap-6 lg:grid-cols-2'>
         {/* Single Celeb Container*/}       
-          {people.map((data, index) => {
+        {people.map((data, index) => {
             return(
               <div className='flex col-span-1 w-full' key={index}>
                 {/* Picture */}
@@ -73,8 +73,44 @@ function Section4() {
                 </div>
               </div>
             )
-          })}
+        })}
 
+        <div className='flex col-span-1 w-full'>
+          {/* Picture */}
+          <div className='w-[300px] relative h-[180px] md:h-[230px] bg-metal'>
+            <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={bgPoster} alt='ImgFiller' />
+            <img className='absolute h-full cursor-pointer w-full object-cover object-center' src={bgPoster} alt='backgroundPoster'/>
+          </div>
+          {/* Info */}
+          <div className=' ml-6 overflow-hidden w-full'>
+            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2'>Hey</h1>
+            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[90%]'>Hey</h1>
+            <div>
+            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[80%]'>Hey</h1>
+            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[70%]'>Hey</h1>
+            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[60%]'>Hey</h1>
+            </div>
+          </div>
+        </div>  
+        
+        <div className='flex col-span-1 w-full'>
+          {/* Picture */}
+          <div className='w-[300px] relative h-[180px] md:h-[230px] bg-metal'>
+            <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={bgPoster} alt='ImgFiller' />
+            <img className='absolute h-full cursor-pointer w-full object-cover object-center' src={bgPoster} alt='backgroundPoster'/>
+          </div>
+          {/* Info */}
+          <div className=' ml-6 overflow-hidden w-full'>
+            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 select-none'>Hey</h1>
+            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[90%] select-none'>Hey</h1>
+            <div>
+            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[80%] select-none'>Hey</h1>
+            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[70%] select-none'>Hey</h1>
+            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[60%] select-none'>Hey</h1>
+            </div>
+          </div>
+        </div>  
+          
       </div>
     </section>
   )

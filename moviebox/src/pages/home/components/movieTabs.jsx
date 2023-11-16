@@ -51,8 +51,8 @@ export default function MovieTabs() {
 
 
   return (
-    <Box sx={{ width: '100%' }} className="mb-12">
-      <Box sx={{ borderBottom: 1, borderColor: 'divider'}} className="mb-20 lg:overflow-hidden overflow-scroll no-scrollbar md:overflow-scroll md:no-scrollbar">
+    <Box sx={{ width: '100%'  }} className="mb-12">
+      <Box sx={{ borderBottom: 1, borderColor: 'divider'}} className="mb-20 lg:overflow-hidden overflow-scroll no-scrollbar md:overflow-scroll md:no-scrollbar relative">
         <Tabs 
         value={value} 
         onChange={handleChange} 
@@ -74,6 +74,7 @@ export default function MovieTabs() {
           </div>
         </Tabs>
       </Box>
+
       <CustomTabPanel value={value} index={0}>
         <NowPlaying/>
       </CustomTabPanel>

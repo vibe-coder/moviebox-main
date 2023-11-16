@@ -3,7 +3,7 @@ import MovieTabs2 from './MovieTabs2'
 
 function Section3() {
   return (
-    <section className=' px-6 mt-40 md:px-16 lg:px-28'>
+    <section className=' px-6 mt-40 md:px-16 lg:px-28 relative'>
       {/* ----------------------- Category Button Selection ------------------- */}
       <MovieTabs2/>
     </section>
