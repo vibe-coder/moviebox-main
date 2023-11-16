@@ -31,7 +31,7 @@ function TopRated() {
 
   let imgPref = "https://image.tmdb.org/t/p/original/"
 
-  let myArr = [1, 2, 3, 4, 5, 6,1, 2, 3, 4, 5, 6,]
+  let myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   const [arr, setArr] = useState([])
 
   useEffect(() => {
@@ -41,7 +41,7 @@ function TopRated() {
   return (
     <div>
       {/* Single movie card */}
-      <div className='grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 relative'>
+      <div className='grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 absolute'>
         {movies.map((data) => {
           return(
             <div className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem]' key={data.id}>
@@ -55,10 +55,11 @@ function TopRated() {
       </div>
 
 
-      <div className='relative w-full grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 h-screen'>
+      {/* Loading Animation */}
+      <div className='relative top-0 w-full grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5'>
         {arr.map((arr) => {
           return (
-            <div className=' h-[19rem] w-[100%] md:h-[20rem]  lg:h-[20rem]'>
+            <div className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between  lg:h-[20rem]'>
               <div className='h-[90%] w-full bg-neutral-800 flex justify-center items-center'>
                 <div role="status" className="space-y-8 w-full h-full animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
                   <div className="flex h-full w-full items-center justify-center bg-neutral-500 dark:bg-gray-800">
