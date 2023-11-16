@@ -8,6 +8,7 @@ import UpcomingMovies from './MovieComponents/UpcomingMovies';
 import PopularMovies from './MovieComponents/PopularMovies';
 import TopRated from './MovieComponents/TopRated';
 import NowPlaying from './MovieComponents/NowPlaying';
+import { Link } from 'react-router-dom';
 
 
 function CustomTabPanel(props) {
@@ -70,7 +71,9 @@ export default function MovieTabs() {
           <Tab label="Top Rated" {...a11yProps(3)} />
         
           <div className='flex justify-end w-full lg:items-center font-sans lg:w-full text-black md:w-screen md:justify-end md:items-center'>
-            <button className='h-full transition ease-in-out w-28 rounded text-white border-2 border-white bg-transparent hover:border-yellow-1 hover:text-yellow-1 md:h-11 md:w-32'>View All</button>
+            <Link to="/category">
+              <button className='h-full transition ease-in-out w-28 rounded text-white border-2 border-white bg-transparent hover:border-yellow-1 hover:text-yellow-1 md:h-11 md:w-32'>View All</button>
+            </Link>
           </div>
         </Tabs>
       </Box>
