@@ -63,7 +63,7 @@ function Category() {
 
       <div>
         {/* Moive List */}
-        <div className='grid grid-cols-3 gap-x-2 gap-y-11 md:grid-cols-3 lg:grid-cols-6 px-6 lg:gap-x-5 lg:px-28'>
+        <div className='grid grid-cols-3 gap-x-2 gap-y-11 md:grid-cols-3 lg:grid-cols-6 px-6 lg:gap-x-5 lg:px-28 absolute z-20'>
           {/* Single Movie */}
           {movies.map((moviesData) => {
             return(
