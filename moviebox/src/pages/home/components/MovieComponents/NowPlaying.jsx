@@ -42,7 +42,7 @@ function NowPlaying() {
   return (
     <div className='relative'>
       {/* Single movie card */}
-      <div className='grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 absolute '>
+      <div className='grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 absolute w-full'>
         {movies.map((data) => {
           return(
             <div className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem] relative z-10' key={data.id}>

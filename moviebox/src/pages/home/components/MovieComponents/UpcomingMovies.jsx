@@ -32,31 +32,28 @@ function UpcomingMovies() {
 
   let imgPref = "https://image.tmdb.org/t/p/original/"
 
-  let myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+  let newArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   const [arr, setArr] = useState([])
 
   useEffect(() => {
-    setArr(myArr)
+    setArr(newArr)
   })
 
   return (
-    <div>
+    <div className='relative'>
       {/* Single movie card */}
-
-      <div className='grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 absolute'>
+      <div className='grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 absolute w-full'>
         {upcomingMovies.map((data) => {
-        return(
-          <div className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem]' key={data.id}>
-            <div className='w-full h-[90%] bg-black'>
-              <img className='h-full cursor-pointer w-full object-cover object-center duration-[0.2s] hover:opacity-[.7]' src={imgPref + data.poster_path} alt='backgroundPoster' />
+          return(
+            <div className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem] relative z-10' key={data.id}>
+              <div className='w-full h-[90%] bg-black'>
+                <img className='h-full cursor-pointer w-full object-cover object-center duration-[0.2s] hover:opacity-[.7]' src={imgPref + data.poster_path} alt='backgroundPoster' />
+              </div>
+              <div className='h-[10%] mt-2 flex items-center text-neutral-300 font-sans ' key={data.id}><p className='md:text-lg text-md lg:text-[1rem] text-ellipsis whitespace-pre-wrap overflow-hidden line-clamp-1'>{data.original_title}</p></div>
             </div>
-            <div className='h-[10%] mt-2 flex items-center text-neutral-300 font-sans '><p className='md:text-lg text-md lg:text-[1rem] text-ellipsis whitespace-pre-wrap overflow-hidden line-clamp-1'>{data.original_title}</p></div>
-          </div>
-        )
+          )
         })}
       </div>
-
-
 
       {/* Loading Animation */}
       <div className='relative top-0 w-full grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5'>

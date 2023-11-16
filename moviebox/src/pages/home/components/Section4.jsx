@@ -32,13 +32,21 @@ function Section4() {
 
   let imgPref = "https://image.tmdb.org/t/p/original/"
 
+
+  let myArr = [1, 2, 3, 4, 5, 6]
+  const [arr, setArr] = useState([])
+
+  useEffect(() => {
+    setArr(myArr)
+  })
+
   function hideImg() {
     document.getElementById("HideImg")
     .style.display = "none";
    }
 
   return (
-    <section className='mt-40 px-6 pb-32 md:px-16 lg:px-28'>
+    <section className='mt-40 px-6 pb-32 md:px-16 lg:px-28 relative'>
       {/* ----------------------- Category Button Selection ------------------- */}
       <div className='flex border-b border-neutral mb-12'>
         <button className='px-3 pb-12 h-6 font-sans text-white border-b-2  border-transparent hover:border-yellow-1 z-10 md:text-lg'>Trending Celebs</button>
@@ -74,44 +82,34 @@ function Section4() {
               </div>
             )
         })}
-
-        <div className='flex col-span-1 w-full'>
-          {/* Picture */}
-          <div className='w-[300px] relative h-[180px] md:h-[230px] bg-metal'>
-            <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={bgPoster} alt='ImgFiller' />
-            <img className='absolute h-full cursor-pointer w-full object-cover object-center' src={bgPoster} alt='backgroundPoster'/>
-          </div>
-          {/* Info */}
-          <div className=' ml-6 overflow-hidden w-full'>
-            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2'>Hey</h1>
-            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[90%]'>Hey</h1>
-            <div>
-            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[80%]'>Hey</h1>
-            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[70%]'>Hey</h1>
-            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[60%]'>Hey</h1>
-            </div>
-          </div>
-        </div>  
-        
-        <div className='flex col-span-1 w-full'>
-          {/* Picture */}
-          <div className='w-[300px] relative h-[180px] md:h-[230px] bg-metal'>
-            <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={bgPoster} alt='ImgFiller' />
-            <img className='absolute h-full cursor-pointer w-full object-cover object-center' src={bgPoster} alt='backgroundPoster'/>
-          </div>
-          {/* Info */}
-          <div className=' ml-6 overflow-hidden w-full'>
-            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 select-none'>Hey</h1>
-            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[90%] select-none'>Hey</h1>
-            <div>
-            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[80%] select-none'>Hey</h1>
-            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[70%] select-none'>Hey</h1>
-            <h1 className='text-neutral-800 font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[60%] select-none'>Hey</h1>
-            </div>
-          </div>
-        </div>  
-          
       </div>
+
+      <div className='relative grid grid-cols-1 md:grid-cols-1 gap-6 lg:grid-cols-2'>
+      {
+        arr.map((data) => {
+          return(
+            <div className='flex col-span-1 w-full'>
+              {/* Picture */}
+              <div className='w-[300px] relative h-[180px] md:h-[230px] bg-metal'>
+                <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={bgPoster} alt='ImgFiller' />
+                <img className='absolute h-full cursor-pointer w-full object-cover object-center' src={bgPoster} alt='backgroundPoster'/>
+              </div>
+              {/* Info */}
+              <div className=' ml-6 overflow-hidden w-full '>
+                <h1 className='text-transparent font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center'>Hey</h1>
+                <h1 className='text-transparent font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[90%] space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center'>Hey</h1>
+                <div>
+                <h1 className='text-transparent font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[80%] space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center'>Hey</h1>
+                <h1 className='text-transparent font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[70%] space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center'>Hey</h1>
+                <h1 className='text-transparent font-bold text-lg font-sans md:text-2xl bg-neutral-800 rounded-2xl mb-2 w-[60%] space-y-8 animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center'>Hey</h1>
+                </div>
+              </div>
+            </div> 
+          )
+        })
+      }
+      </div>
+
     </section>
   )
 }
