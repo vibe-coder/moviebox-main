@@ -1,13 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Footer() {
   return (
     <footer className='h-80 bg-neutral-2 flex justify-center items-center'>
       <div>
-        <h1 className='text-white m-0 mb-9 text-5xl font-bold text-center font-sans focus:outline-none focus-visible:ring'>
-          MOVIE<span className='font-hairline text-yellow-1'>BOX</span>
-        </h1>
+        <Link to="/">
+          <h1 className='text-white m-0 mb-9 text-5xl font-bold text-center font-sans focus:outline-none focus-visible:ring'>
+            MOVIE<span className='font-hairline text-yellow-1'>BOX</span>
+          </h1>
+        </Link>
 
         {/* Socials */}
         <div className='text-center mb-12 flex gap-5 justify-center'>
