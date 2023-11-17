@@ -36,7 +36,7 @@ function Drama() {
 
   useEffect(() => {
     setArr(myArr)
-  })
+  }, [setArr])
 
   return (
     <div className='relative'>

@@ -36,7 +36,7 @@ function TopRated() {
 
   useEffect(() => {
     setArr(myArr)
-  })
+  }, [setArr])
 
   return (
     <div className='relative'>

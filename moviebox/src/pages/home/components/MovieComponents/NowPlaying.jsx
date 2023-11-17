@@ -36,7 +36,7 @@ function NowPlaying() {
 
   useEffect(() => {
     setArr(myArr)
-  })
+  }, [setArr])
   
 
   return (

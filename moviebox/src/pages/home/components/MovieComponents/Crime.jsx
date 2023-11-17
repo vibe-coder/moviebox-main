@@ -36,7 +36,7 @@ function Crime() {
 
   useEffect(() => {
     setArr(myArr)
-  })
+  }, [setArr])
 
   return (
     <div className='relative'>

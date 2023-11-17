@@ -37,7 +37,7 @@ function UpcomingMovies() {
 
   useEffect(() => {
     setArr(newArr)
-  })
+  }, [setArr])
 
   return (
     <div className='relative'>

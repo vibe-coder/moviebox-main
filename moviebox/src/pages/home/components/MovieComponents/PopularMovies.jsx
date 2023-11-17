@@ -36,7 +36,7 @@ function PopularMovies() {
 
   useEffect(() => {
     setArr(myArr)
-  })
+  }, [setArr])
 
   return (
     <div className='relative'>

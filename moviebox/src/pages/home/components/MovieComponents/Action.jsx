@@ -36,7 +36,7 @@ function Action() {
 
   useEffect(() => {
     setArr(myArr)
-  })
+  }, [setArr])
 
   return (
     <div className='relative'>
