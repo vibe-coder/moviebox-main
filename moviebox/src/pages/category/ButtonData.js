@@ -2,92 +2,92 @@ const ButtonData = [
   {
     name: "Action",
     id: 28,
-    img:'action.jpg'
+    img:'/action'
   },
   {
     name: "Adventure",
     id: 12,
-    img:'adventure.jpg'
+    img:'/adventure'
   },
   {
     name: "Animation",
     id: 16,
-    img:'animation.jpg'
+    img:'/animation'
   },
   {
     name: "Comedy",
     id: 35,
-    img:'comedy.jpg'
+    img:'/comedy'
   },
   {
     name: "Crime",
     id: 80,
-    img:'crime.jpg'
+    img:'/crime'
   },
   {
     name: "Documentary",
     id: 99,
-    img:'documentary.jpg'
+    img:'/documentary'
   },
   {
     name: "Drama",
     id: 18,
-    img:'drama.jpg'
+    img:'/drama'
   },
   {
     name: "Family",
     id: 10751,
-    img:'family.jpg'
+    img:'/family'
   },
   {
     name: "Fantasy",
-    id: 14,
-    img:'fantasy.jpg'
+    id: 1/4,
+    img:'fantasy'
   },
   {
     name: "History",
     id: 36,
-    img:'history.jpg'
+    img:'/history'
   },
   {
     name: "Horror",
     id: 27,
-    img:'horror.jpg'
+    img:'/horror'
   },
   {
     name: "Music",
     id: 10402,
-    img:'music.jpg'
+    img:'/music'
   },
   {
     name: "Mystery",
     id: 9648,
-    img:'mystery.jpg'
+    img:'/mystery'
   },
   {
     name: "Romance",
     id: 10749,
-    img:'romance.jpg'
+    img:'/romance'
   },
   {
     name: "Science Fiction",
     id: 878,
-    img:'sciencefiction.jpg'
+    img:'/sciencefiction'
   },
   {
     name: "Thriller",
     id: 53,
-    img:'thriller.jpg'
+    img:'/thriller'
   },
   {
     name: "War",
     id: 10752,
-    img:'war.jpg'
+    img:'/war'
   },
   {
     name: "Western",
     id: 37,
-    img:'western.jpg'
+    img:'/western'
   },
 ]
 

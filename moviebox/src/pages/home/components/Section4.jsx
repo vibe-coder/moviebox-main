@@ -1,5 +1,5 @@
 import React from 'react'
-import bgPoster from "../../../imgHolder.jpg"
+import bgPoster from "../../../images/imgHolder.jpg"
 import { useState, useEffect } from 'react';
 
 function Section4() {
