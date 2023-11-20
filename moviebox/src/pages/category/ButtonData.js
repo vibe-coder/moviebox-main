@@ -42,7 +42,7 @@ const ButtonData = [
   {
     name: "Fantasy",
     id: 14,
-    img:'./images/animation.jpg'
+    img:'./images/fantasy.jpg'
   },
   {
     name: "History",
