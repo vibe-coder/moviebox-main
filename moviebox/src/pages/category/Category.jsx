@@ -34,10 +34,6 @@ function Category() {
     }
   }
 
-  
-
-  
-
   const fetchMovies = (id) => {
     fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=truee&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${id}`, options)
     .then((res) => res.json())
@@ -48,7 +44,6 @@ function Category() {
       setMovies(newData)
     })
   }
-
 
 
   useEffect(() => {
@@ -66,6 +61,7 @@ function Category() {
     setArr(myArr)
   }, [setArr])
 
+
   return (
     <section id='section' className='bg-black pb-28 pt-28'>
 
@@ -73,9 +69,11 @@ function Category() {
       <div id='buttonWrapper' className="bg-black mb-10 mt-6 grid grid-cols-9 gap-y-3 px-3     lg:w-full lg:flex lg:overflow-hidden">
         {ButtonData.map((button) => {
           return(
-            <button id='button' className='bg-neutral-700 relative text-white lg:h-[20rem] h-[10rem] lg:flex-[1] lg:flex [writing-mode:vertical-lr] active:text-white flex justify-center items-center font-sans font-medium uppercase text-sm' key={button.id} onClick={() => fetchMovies(button.id)}>
-              <div id='textWrapper' className='absolute z-10 bg-transparentNeutral-2 h-full w-full flex justify-start pt-6 items-center rotate-180'><p className='font-bold lg:font-sans lg:text-3xl lg:font-bold '>{button.name}</p></div>
-              <img id='image' className='h-full absolute cursor-pointer w-[100%] object-cover object-center' src={require('' + button.img)} alt='backgroundPoster' />
+            <button id='button' className='bg-black relative text-white lg:h-[20rem] h-[10rem] lg:flex-[1] lg:flex [writing-mode:vertical-lr] active:text-white flex justify-center items-center font-sans font-medium uppercase text-sm' key={button.id} 
+            // onClick={() => fetchMovies(button.id)}
+            >
+              <div id='textWrapper' className='absolute z-10 h-full w-full flex justify-start pt-6 items-center rotate-180'><p className='font-bold lg:font-sans lg:text-3xl lg:font-bold '>{button.name}</p></div>
+              <img id='image' className='h-full absolute cursor-pointer w-[100%] object-cover object-center ' src={require('' + button.img)} alt='backgroundPoster' />
             </button>
           )
         })}
