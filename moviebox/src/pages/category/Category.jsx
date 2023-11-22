@@ -70,7 +70,7 @@ function Category() {
         {ButtonData.map((button) => {
           return(
             <button id='button' className='bg-black relative text-white lg:h-[20rem] h-[10rem] lg:flex-[1] lg:flex [writing-mode:vertical-lr] active:text-white flex justify-center items-center font-sans font-medium uppercase text-sm' key={button.id} 
-            // onClick={() => fetchMovies(button.id)}
+            onClick={() => fetchMovies(button.id)}
             >
               <div id='textWrapper' className='absolute z-10 h-full w-full flex justify-start pt-6 items-center rotate-180'><p className='font-bold lg:font-sans lg:text-3xl lg:font-bold '>{button.name}</p></div>
               <img id='image' className='h-full absolute cursor-pointer w-[100%] object-cover object-center ' src={require('' + button.img)} alt='backgroundPoster' />
