@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useState} from 'react';
-
+// import DynamicPage from '../../../components/DynamicPage';
 
 const Section1 = () => {
 
@@ -86,7 +86,7 @@ const Section1 = () => {
                 <div className='flex absolute h-screen w-full items-center px-6 z-[2] md:px-16 lg:px-28 whitespace-normal bg-gradient-to-t from-black to-transparent'>
                   <div className='md:w-[80%] lg:w-[600PX]'>
                     {/* Title */}
-                    <h1 className='text-white font-bold font-sans text-4xl m-0 md:text-7xl'>{data.original_title}</h1>
+                    <h1 className='text-white font-bold font-sans text-4xl m-0 md:text-7xl text-ellipsis whitespace-pre-wrap overflow-hidden line-clamp-2'>{data.original_title}</h1>
                     {/* Description */}
                     <p className='font-sans text-sm m-0 text-neutral-400 md:text-xl'>{data.genre_ids} | {data.release_date}</p>
                     {/* Overview */}
