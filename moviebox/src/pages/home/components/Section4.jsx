@@ -38,7 +38,7 @@ function Section4() {
 
   useEffect(() => {
     setArr(myArr)
-  })
+  }, [setArr])
 
   function hideImg() {
     document.getElementById("HideImg")
