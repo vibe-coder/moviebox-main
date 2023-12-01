@@ -72,7 +72,7 @@ function Action() {
         {/* Single movie card */}
         {movies.map((data) => {
           return(
-            <div className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem] relative z-10 hover:cursor-pointer' key={data.id} onClick={() => displayModaL(data.id, data.original_title, data.backdrop_path, data.overview, data.vote_average, data.release_date, toggleModal)} >
+            <div className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem] relative z-10 hover:cursor-pointer' key={data.id} onClick={() => displayModaL(data.id, data.original_title, data.backdrop_path, data.overview, data.vote_average, data.release_date, toggleModal)}>
               <div className='w-full h-[90%] bg-black'>
                 <img className='h-full cursor-pointer w-full object-cover object-center duration-[0.2s] hover:opacity-[.7]' src={imgPref + data.poster_path} alt='backgroundPoster' />
               </div>
