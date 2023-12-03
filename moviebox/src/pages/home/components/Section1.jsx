@@ -93,7 +93,7 @@ const Section1 = () => {
                     <p className='text-white text-sm font-sans mt-5 font-hairline md:text-lg '>{data.overview}</p>
                     {/* Rating */}
                     <div className='my-6 text-white'>
-                      <div className='border-2 border-yellow-1 w-12 rounded flex justify-center items-center md:h-9 md:w-14'>4.0</div>
+                      <div className='border-2 border-yellow-1 w-12 rounded flex justify-center items-center md:h-9 md:w-14'>{data.vote_average}</div>
                     </div>
                     {/* Button Wrapper */}
                     <div className='flex gap-4 flex-wrap'>
