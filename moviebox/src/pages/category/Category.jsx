@@ -5,7 +5,7 @@ import "./styling/Category.scss"
 
 function Category() {
 
-  // const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${id}`
+  // !  const url = `https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${id}`
   const options = {
     method: 'GET',
     headers: {
@@ -15,9 +15,15 @@ function Category() {
   };
 
   const [movies, setMovies] = useState([])
-  const [page, setPage] = useState(1)
+  const [modal, setModal] = useState(false)
+
+  // ! Toggling Modal states
+  const toggleModal = () => {
+    setModal(!modal)
+  }
 
 
+  // ! Loading more pages
   let number = 1
   let condition = true
 
@@ -51,15 +57,33 @@ function Category() {
   }, [setMovies])
 
   let imgPref = "https://image.tmdb.org/t/p/original/"
-  let categoryimg = "../../images"
 
 
+  // ! Populating Loading Animation
   let myArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
   const [arr, setArr] = useState([])
 
   useEffect(() => {
     setArr(myArr)
   }, [setArr])
+
+
+    // ! Displaying Modal
+    const [mountModal, setMountModal] = useState([])
+
+    const displayModaL = (id, name, bgPoster, overview, vote, date, callback) =>{
+      let modalData = {
+        modalId: id,
+        modalName: name,
+        moadlBgPoster: bgPoster,
+        modalOverview: overview,
+        modalVote: vote,
+        modalDate: date,
+      }
+  
+      setMountModal(modalData)
+      callback()
+    }
 
 
   return (
@@ -86,7 +110,7 @@ function Category() {
           {/* Single Movie */}
           {movies.map((moviesData) => {
             return(
-            <div key={moviesData.id} className=' h-[10rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem]'>
+            <div key={moviesData.id} onClick={() => displayModaL(moviesData.id, moviesData.original_title, moviesData.backdrop_path, moviesData.overview, moviesData.vote_average, moviesData.release_date, toggleModal)} className=' h-[10rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem]'>
               <div className='w-full h-[90%] bg-black'>
                 <img className='h-full cursor-pointer w-full object-cover object-center duration-[0.2s] hover:opacity-[.7]' src={imgPref + moviesData.poster_path} alt='backgroundPoster' />
               </div>
@@ -95,8 +119,26 @@ function Category() {
             )
           })}   
         </div>
-
-
+      
+        {/* Movies Selection pop-up modal */}
+        {modal && 
+          <section  className="flex bg-transparentNeutral-2 justify-center items-center fixed z-20 top-0 right-0 bottom-0 left-0">
+            <div className='w-full h-full flex items-center justify-center overflow-hidden absolute' onClick={toggleModal}></div>
+            <div className="bg-black w-[90%] h-[70%] lg:w-[70%] relative overflow-hidden">
+              <button className="absolute z-50 bg-yellow-1 text-black text-2xl rounded-full w-32 h-32 right-[-50px] top-[-50px] font-bold pr-7 pt-7    hover:bg-white transition duration-200 ease-in-out" onClick={toggleModal}>x</button>
+              <div className="absolute bg-transparetNeutral z-40 text-white top-0 left-0 right-0 bottom-0 flex items-center px-6 md:px-16 lg:px-28">
+                <div>
+                <h1 className='text-white font-bold font-sans text-4xl m-0 md:text-7xl'>{mountModal.modalName}</h1>
+                <p className='text-white text-md font-sans mt-2 mb-5 font-hairline md:text-lg '>{mountModal.modalOverview}</p>
+                <p className='text-white text-sm font-sans mt-2 font-bold md:text-lg '>Rating: <span className="font-sans font-normal">{mountModal.modalVote} / 10</span></p>
+                <p className='text-white text-sm font-sans mt-2 font-bold md:text-lg '>Release Date: <span className="font-sans font-normal">{mountModal.modalDate}</span></p>
+                {/* <div>Production</div> */}
+                </div>
+              </div>
+              <img src={imgPref + mountModal.moadlBgPoster} alt="background poster" className="h-full w-full object-cover object-center" />
+            </div>
+          </section>
+        }
 
 
         {/* Loading animation */}
