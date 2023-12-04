@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import "./styles/Modal.scss"
 
 function UpcomingMovies() {
   const url = 'https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1'
@@ -60,6 +61,12 @@ function UpcomingMovies() {
     setMountModal(modalData)
     callback()
   }
+
+  if(modal){
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  } 
 
   return (
     <div className='relative'>

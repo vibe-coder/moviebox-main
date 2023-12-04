@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState} from 'react'
-
 import "./styles/Nav.scss"
+import "./styles/Modal.scss"
 
 function Nav() {
 
@@ -60,6 +60,12 @@ function Nav() {
     setMountModal(modalData)
     callback()
   }
+
+  if(modal){
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  } 
 
   return (
     <section id="section"  className='fixed z-[15] right-0 left-0 h-28 flex justify-center items-center'>

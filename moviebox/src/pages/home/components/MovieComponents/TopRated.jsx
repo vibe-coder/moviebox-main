@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import "./styles/Modal.scss"
 
 function TopRated() {
 
@@ -59,6 +60,12 @@ function TopRated() {
     setMountModal(modalData)
     callback()
   }
+
+  if(modal){
+    document.body.classList.add('active-modal')
+  } else {
+    document.body.classList.remove('active-modal')
+  } 
 
   return (
     <div className='relative'>
