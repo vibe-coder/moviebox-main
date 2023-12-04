@@ -102,7 +102,7 @@ function NowPlaying() {
       <div className='relative top-0 w-full grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5'>
         {arr.map((arr) => {
           return (
-            <div className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between  lg:h-[20rem]'>
+            <div  className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between  lg:h-[20rem]'>
               <div className='h-[90%] w-full bg-neutral-800 flex justify-center items-center'>
                 <div role="status" className="space-y-8 w-full h-full animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
                   <div className="flex h-full w-full items-center justify-center bg-neutral-500 dark:bg-gray-800">
