@@ -57,7 +57,7 @@ function Section4() {
       {/* Celeb Wrapper */}
       <div className='relative'>
         {/* Celeb Container */}
-        <div className='grid grid-cols-1 md:grid-cols-1 gap-6 lg:grid-cols-2 absolute top-0 w-full z-20 bg-black'>
+        <div className='grid grid-cols-1 md:grid-cols-1 gap-6 lg:grid-cols-2 absolute top-0 w-full z-[11] bg-black'>
         {/* Single Celeb Container*/}       
         {people.map((data, index) => {
             return(
