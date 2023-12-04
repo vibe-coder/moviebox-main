@@ -68,7 +68,7 @@ function Nav() {
   } 
 
   return (
-    <section id="section"  className='fixed z-[15] right-0 left-0 h-28 flex justify-center items-center'>
+    <section id="section"  className='fixed z-[20] right-0 left-0 h-28 flex justify-center items-center'>
       <div className='w-full h-[50%]'>
         {/*  */}
         <nav id='navs' className="w-full flex gap-4 justify-between items-center px-6 md:gap-8 md:px-16 lg:px-28 relative z-[15]">
@@ -94,9 +94,9 @@ function Nav() {
 
         {/* Serch Results */}
         {focus && 
-          <div className='bg-neutral-800 text-white fixed w-screen h-screen top-0 lg:pt-40 lg:px-28 overflow-hidden'>
+          <div className='text-white fixed w-screen h-screen top-0 px-6 pt-28 md:pt-40 md:px-16 lg:pt-40 lg:px-28 bg-neutral-800 '>
             <div className='overflow-scroll no-scrollbar h-[100%] pb-10'>
-              <div>
+              <div >
                 <h1 className='font-bold font-sans text-neutral-300 text-2xl md:text-4xl lg:text-4xl'>Search Results</h1>
                 {/* All Movie Wrapper */}
                 <div className='text-white mt-2 grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5'>
@@ -120,7 +120,7 @@ function Nav() {
 
         {/* Movies Selection pop-up modal */}
         {modal && 
-          <section  className="flex bg-transparentNeutral-2 justify-center items-center fixed z-20 top-0 right-0 bottom-0 left-0">
+          <section  className="flex bg-transparentNeutral-2 justify-center items-center fixed z-[100] top-0 right-0 bottom-0 left-0 h-screen">
             <div className='w-full h-full flex items-center justify-center overflow-hidden absolute' onClick={toggleModal}></div>
             <div className="bg-black w-[90%] h-[70%] lg:w-[70%] relative overflow-hidden">
               <button className="absolute z-50 bg-yellow-1 text-black text-2xl rounded-full w-32 h-32 right-[-50px] top-[-50px] font-bold pr-7 pt-7    hover:bg-white transition duration-200 ease-in-out" onClick={toggleModal}>x</button>
