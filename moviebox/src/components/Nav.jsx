@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState} from 'react'
-import "./styles/Nav.scss"
 import "./styles/Modal.scss"
 
 function Nav() {
@@ -68,7 +67,7 @@ function Nav() {
   } 
 
   return (
-    <section id="section"  className='fixed z-[20] right-0 left-0 h-28 flex justify-center items-center'>
+    <section id="section"  className='fixed bg-blurTransparent backdrop-blur-2xl border-b-[1px] border-b-borderGrey z-[40] right-0 left-0 h-28 flex justify-center items-center'>
       <div className='w-full h-[50%]'>
         {/*  */}
         <nav id='navs' className="w-full flex gap-4 justify-between items-center px-6 md:gap-8 md:px-16 lg:px-28 relative z-[15]">
