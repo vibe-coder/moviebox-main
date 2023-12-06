@@ -51,7 +51,7 @@ function Nav() {
       modalId: id,
       modalName: name,
       moadlBgPoster: bgPoster,
-      // modalOverview: overview,
+      modalOverview: overview,
       modalVote: vote,
       modalDate: date,
     }
@@ -120,13 +120,13 @@ function Nav() {
         {/* Movies Selection pop-up modal */}
         {modal && 
           <section  className="flex bg-transparentNeutral-2 justify-center items-center fixed z-[100] top-0 right-0 bottom-0 left-0 h-screen">
-            <div className='w-full h-full flex items-center justify-center overflow-hidden absolute' onClick={toggleModal}></div>
+            <div className='w-full h-full flex items-center justify-center overflow-hidden absolute' onClick={toggleModal}></div>s
             <div className="bg-black w-[90%] h-[70%] lg:w-[70%] relative overflow-hidden">
               <button className="absolute z-50 bg-yellow-1 text-black text-2xl rounded-full w-32 h-32 right-[-50px] top-[-50px] font-bold pr-7 pt-7    hover:bg-white transition duration-200 ease-in-out" onClick={toggleModal}>x</button>
               <div className="absolute bg-transparetNeutral z-40 text-white top-0 left-0 right-0 bottom-0 flex items-center px-6 md:px-16 lg:px-28">
                 <div>
                 <h1 className='text-white font-bold font-sans text-4xl m-0 md:text-7xl'>{mountModal.modalName}</h1>
-                <p className='text-white text-md font-sans mt-2 mb-5 font-hairline md:text-lg '>{mountModal.modalOverview}</p>
+                <p className='text-white text-md font-sans mt-2 mb-5 font-hairline md:text-lg'>{mountModal.modalOverview}</p>
                 <p className='text-white text-sm font-sans mt-2 font-bold md:text-lg '>Rating: <span className="font-sans font-normal">{mountModal.modalVote} / 10</span></p>
                 <p className='text-white text-sm font-sans mt-2 font-bold md:text-lg '>Release Date: <span className="font-sans font-normal">{mountModal.modalDate}</span></p>
                 {/* <div>Production</div> */}
