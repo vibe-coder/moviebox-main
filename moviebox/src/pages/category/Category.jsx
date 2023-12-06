@@ -41,7 +41,9 @@ function Category() {
     }
   }
 
-  const fetchMovies = (id) => {
+
+
+  const fetchMovies = (id,) => {
     fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=truee&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${id}`, options)
     .then((res) => res.json())
     .then((data) => {
@@ -49,7 +51,17 @@ function Category() {
       let newData = data.results
       // console.log(newData)
       setMovies(newData)
+      
     })
+  }
+
+  // Changing Category Title
+  const [current, setCurrent] = useState('ACTION')
+
+  const changeCategoryTitle = (title, id,  callback) => {
+    setCurrent(title)
+
+    callback(id)
   }
 
 
@@ -93,6 +105,8 @@ function Category() {
     } 
 
 
+
+
   return (
     <section id='section' className='bg-black pb-28 pt-28'>
 
@@ -101,7 +115,7 @@ function Category() {
         {ButtonData.map((button) => {
           return(
             <button id='button' className='bg-black relative text-white lg:h-[20rem] h-[10rem] lg:flex-[1] lg:flex [writing-mode:vertical-lr] active:text-white flex justify-center items-center font-sans font-medium uppercase text-sm' key={button.id} 
-            onClick={() => fetchMovies(button.id)}
+            onClick={() => changeCategoryTitle(button.name, button.id, fetchMovies)}
             >
               <div id='textWrapper' className='absolute z-10 h-full w-full flex justify-start pt-6 items-center rotate-180'><p className='font-bold lg:font-sans lg:text-3xl lg:font-bold '>{button.name}</p></div>
               <img id='image' className='h-full absolute cursor-pointer w-[100%] object-cover object-center ' src={require('' + button.img)} alt='backgroundPoster' />
@@ -112,6 +126,10 @@ function Category() {
 
 
       <div>
+        {/* Category Title */}
+        <div className='px-6 md:px-16 lg:px-28 py-9 md:py-14 lg:py-14'>
+          <h1 className='font-sans text-3xl lg:text-3xl font-bold text-yellow-2 uppercase'>{current}</h1>
+        </div>
         {/* Moive List */}
         <div className='grid grid-cols-2 gap-x-2 gap-y-11 md:grid-cols-3 lg:grid-cols-6 px-6 md:px-16 lg:gap-x-5 lg:px-28 absolute z-20'>
           {/* Single Movie */}
