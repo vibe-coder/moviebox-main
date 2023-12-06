@@ -113,11 +113,11 @@ function Category() {
 
       <div>
         {/* Moive List */}
-        <div className='grid grid-cols-3 gap-x-2 gap-y-11 md:grid-cols-3 lg:grid-cols-6 px-6 lg:gap-x-5 lg:px-28 absolute z-20'>
+        <div className='grid grid-cols-2 gap-x-2 gap-y-11 md:grid-cols-3 lg:grid-cols-6 px-6 md:px-16 lg:gap-x-5 lg:px-28 absolute z-20'>
           {/* Single Movie */}
           {movies.map((moviesData) => {
             return(
-            <div key={moviesData.id} onClick={() => displayModaL(moviesData.id, moviesData.original_title, moviesData.backdrop_path, moviesData.overview, moviesData.vote_average, moviesData.release_date, toggleModal)} className=' h-[10rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem]'>
+            <div key={moviesData.id} onClick={() => displayModaL(moviesData.id, moviesData.original_title, moviesData.backdrop_path, moviesData.overview, moviesData.vote_average, moviesData.release_date, toggleModal)} className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between lg:h-[20rem]'>
               <div className='w-full h-[90%] bg-black'>
                 <img className='h-full cursor-pointer w-full object-cover object-center duration-[0.2s] hover:opacity-[.7]' src={imgPref + moviesData.poster_path} alt='backgroundPoster' />
               </div>
@@ -149,7 +149,7 @@ function Category() {
 
 
         {/* Loading animation */}
-        <div className='top-0 w-full grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 px-6 lg:px-28'>
+        <div className='top-0 w-full grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 px-6 md:px-16 lg:px-28'>
         {arr.map((arr) => {
           return (
             <div key={arr} className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between  lg:h-[20rem]'>
