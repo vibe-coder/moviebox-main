@@ -2,6 +2,7 @@ import React from 'react'
 import ButtonData from './ButtonData'
 import { useState, useEffect} from 'react'
 import "./styling/Category.scss"
+import './styling/Modal.scss'
 
 function Category() {
 
@@ -85,6 +86,12 @@ function Category() {
       callback()
     }
 
+    if(modal){
+      document.body.classList.add('active-modal')
+    } else {
+      document.body.classList.remove('active-modal')
+    } 
+
 
   return (
     <section id='section' className='bg-black pb-28 pt-28'>
@@ -122,7 +129,7 @@ function Category() {
       
         {/* Movies Selection pop-up modal */}
         {modal && 
-          <section  className="flex bg-transparentNeutral-2 justify-center items-center fixed z-20 top-0 right-0 bottom-0 left-0">
+          <section  className="flex bg-transparentNeutral-2 justify-center items-center fixed z-[50] top-0 right-0 bottom-0 left-0 w-screen h-screen">
             <div className='w-full h-full flex items-center justify-center overflow-hidden absolute' onClick={toggleModal}></div>
             <div className="bg-black w-[90%] h-[70%] lg:w-[70%] relative overflow-hidden">
               <button className="absolute z-50 bg-yellow-1 text-black text-2xl rounded-full w-32 h-32 right-[-50px] top-[-50px] font-bold pr-7 pt-7    hover:bg-white transition duration-200 ease-in-out" onClick={toggleModal}>x</button>
