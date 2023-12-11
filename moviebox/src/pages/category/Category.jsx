@@ -16,58 +16,60 @@ function Category() {
   };
 
   const [movies, setMovies] = useState([])
-  const [modal, setModal] = useState(false)
+  const [page, setPage] = useState(1)
+
+  useEffect(() => {
+    fetchData(page, 28)
+  }, [page])
+
+  const fetchData = async (pageNum, id) => {
+    fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=truee&include_video=false&language=en-US&page=${pageNum}&sort_by=popularity.desc&with_genres=${id}`, options)
+    .then((res) => res.json())
+    .then((data) => {
+      setMovies((prevState) => [...prevState, ...data.results])
+    })
+    .catch((error) => {
+      console.log(error)
+    })
+  }
+
+  const loadMore = () => {
+    setPage((prevState) => prevState + 1)
+  }
+
+    // !Fetching Movie Data
+    // const fetchMovies = (id) => {
+    //   fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=truee&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${id}`, options)
+    //   .then((res) => res.json())
+    //   .then((data) => {
+    //     let newData = data.results
+    //     setMovies(newData)      
+    //   })
+    // }
+  
+    // useEffect(() => {
+    //   fetchMovies(28)
+    // }, [])
+
 
   // ! Toggling Modal states
+  const [modal, setModal] = useState(false)
+
   const toggleModal = () => {
     setModal(!modal)
   }
 
 
-  // ! Loading more pages
-  let number = 1
-  let condition = true
 
-  let newNumber
-
-  function nextPage(){
-    if(condition){
-      number++
-      console.log(number)
-      
-      newNumber = number
-      console.log(newNumber)
-      return newNumber
-    }
-  }
-
-
-
-  const fetchMovies = (id,) => {
-    fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=truee&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${id}`, options)
-    .then((res) => res.json())
-    .then((data) => {
-      console.log(data)
-      let newData = data.results
-      // console.log(newData)
-      setMovies(newData)
-      
-    })
-  }
-
-  // Changing Category Title
+  //! Changing Category Title
   const [current, setCurrent] = useState('ACTION')
 
   const changeCategoryTitle = (title, id,  callback) => {
     setCurrent(title)
 
-    callback(id)
+    callback(page, id)
   }
 
-
-  useEffect(() => {
-    fetchMovies()
-  }, [setMovies])
 
   let imgPref = "https://image.tmdb.org/t/p/original/"
 
@@ -98,12 +100,12 @@ function Category() {
       callback()
     }
 
+    // ! Lock scroll when modal is active
     if(modal){
       document.body.classList.add('active-modal')
     } else {
       document.body.classList.remove('active-modal')
     } 
-
 
 
 
@@ -115,7 +117,7 @@ function Category() {
         {ButtonData.map((button) => {
           return(
             <button id='button' className='bg-black relative text-white lg:h-[20rem] h-[10rem] lg:flex-[1] lg:flex [writing-mode:vertical-lr] active:text-white flex justify-center items-center font-sans font-medium uppercase text-sm' key={button.id} 
-            onClick={() => changeCategoryTitle(button.name, button.id, fetchMovies)}
+            onClick={() => changeCategoryTitle(button.name, button.id, fetchData)}
             >
               <div id='textWrapper' className='absolute z-10 h-full w-full flex justify-start pt-6 items-center rotate-180'><p className='font-bold lg:font-sans lg:text-3xl lg:font-bold '>{button.name}</p></div>
               <img id='image' className='h-full absolute cursor-pointer w-[100%] object-cover object-center ' src={require('' + button.img)} alt='backgroundPoster' />
@@ -125,13 +127,13 @@ function Category() {
       </div>
 
 
-      <div>
+      <div className='relative'>
         {/* Category Title */}
         <div className='px-6 md:px-16 lg:px-28 py-9 md:py-14 lg:py-14'>
           <h1 className='font-sans text-3xl lg:text-3xl font-bold text-yellow-2 uppercase'>{current}</h1>
         </div>
         {/* Moive List */}
-        <div className='grid grid-cols-2 gap-x-2 gap-y-11 md:grid-cols-3 lg:grid-cols-6 px-6 md:px-16 lg:gap-x-5 lg:px-28 absolute z-20'>
+        <div className='grid grid-cols-2 gap-x-2 gap-y-11 md:grid-cols-3 lg:grid-cols-6 px-6 md:px-16 lg:gap-x-5 lg:px-28 relative z-10'>
           {/* Single Movie */}
           {movies.map((moviesData) => {
             return(
@@ -151,9 +153,9 @@ function Category() {
             <div className='w-full h-full flex items-center justify-center overflow-hidden absolute' onClick={toggleModal}></div>
             <div className="bg-black w-[90%] h-[70%] lg:w-[70%] relative overflow-hidden">
               <button className="absolute z-50 bg-yellow-1 text-black text-2xl rounded-full w-32 h-32 right-[-50px] top-[-50px] font-bold pr-7 pt-7    hover:bg-white transition duration-200 ease-in-out" onClick={toggleModal}>x</button>
-              <div className="absolute bg-transparetNeutral z-40 text-white top-0 left-0 right-0 bottom-0 flex items-center px-6 md:px-16 lg:px-28">
+              <div className="absolute bg-transparentNeutral-3 z-40 text-white top-0 left-0 right-0 bottom-0 flex items-center px-6 md:px-16 lg:px-28">
                 <div>
-                <h1 className='text-white font-bold font-sans text-4xl m-0 md:text-7xl'>{mountModal.modalName}</h1>
+                <h1 className='text-white font-bold font-sans text-4xl m-0 md:text-6xl'>{mountModal.modalName}</h1>
                 <p className='text-white text-md font-sans mt-2 mb-5 font-hairline md:text-lg '>{mountModal.modalOverview}</p>
                 <p className='text-white text-sm font-sans mt-2 font-bold md:text-lg '>Rating: <span className="font-sans font-normal">{mountModal.modalVote} / 10</span></p>
                 <p className='text-white text-sm font-sans mt-2 font-bold md:text-lg '>Release Date: <span className="font-sans font-normal">{mountModal.modalDate}</span></p>
@@ -167,7 +169,7 @@ function Category() {
 
 
         {/* Loading animation */}
-        <div className='top-0 w-full grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 px-6 md:px-16 lg:px-28'>
+        <div className='top-0 w-full grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 px-6 md:px-16 lg:px-28 absolute z-[1] lg:pt-[148px]'>
         {arr.map((arr) => {
           return (
             <div key={arr} className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between  lg:h-[20rem]'>
@@ -186,8 +188,9 @@ function Category() {
         </div> 
 
           {/* More page Button */}
-          <div className='flex items-center w-full justify-center mt-24'>
-          <button onClick={() => nextPage()} className='transition ease-in-out h-20 w-[50%] font-sans rounded text-2xl text-black font-bold border border-yellow-1 bg-yellow-1 hover:bg-white hover:border-white'> More </button>
+          <div className='flex items-center w-full justify-center mt-24 gap-8 px-6 md:px-16 lg:px-28'>
+            {/* <button onClick={() => prevPage(fetchPrevMovies)} className='transition ease-in-out h-16 w-[50%] font-sans rounded text-black font-bold border border-yellow-1 bg-yellow-1 hover:bg-white hover:border-white text-xl px-5 md:text-2xl lg:text-2xl'> Previous Page </button> */}
+            <button className='transition ease-in-out h-16 w-[50%] font-sans rounded text-black font-bold border border-yellow-1 bg-yellow-1 hover:bg-white hover:border-white text-xl px-5 md:text-2xl lg:text-2xl' onClick={loadMore} disabled={page > 15 ? true: false}> Next Page </button>
           </div> 
       </div>
     </section>
