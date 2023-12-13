@@ -15,41 +15,56 @@ function Category() {
     }
   };
 
-  const [movies, setMovies] = useState([])
-  const [page, setPage] = useState(1)
+  const [movies, setMovies] = useState([]);
+  const [page, setPage] = useState(2);
+  const [myId, setMyId] = useState(28)
 
   useEffect(() => {
-    fetchData(page, 28)
+    fetchData(myId)
   }, [page])
 
-  const fetchData = async (pageNum, id) => {
-    fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=truee&include_video=false&language=en-US&page=${pageNum}&sort_by=popularity.desc&with_genres=${id}`, options)
+  // ! For default data
+  const fetchData = async (id) => {
+    fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=truee&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${id}`, options)
     .then((res) => res.json())
     .then((data) => {
-      setMovies((prevState) => [...prevState, ...data.results])
+      console.log(data.results)
+
+      // setMovies((prevstate) => [...prevstate, ...data.results]);
+      setMovies(data.results)
     })
     .catch((error) => {
       console.log(error)
     })
   }
 
-  const loadMore = () => {
-    setPage((prevState) => prevState + 1)
-  }
 
-    // !Fetching Movie Data
-    // const fetchMovies = (id) => {
-    //   fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=truee&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_genres=${id}`, options)
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     let newData = data.results
-    //     setMovies(newData)      
-    //   })
-    // }
+    // ! For Next Page data
+    const fetchNextData = async (pageNum, id) => {
+      fetch(`https://api.themoviedb.org/3/discover/movie?include_adult=truee&include_video=false&language=en-US&page=${pageNum}&sort_by=popularity.desc&with_genres=${id}`, options)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data.results)
   
-    // useEffect(() => {
-    //   fetchMovies(28)
-    // }, [])
+        // setMovies(prev => prev.concat(data.results))
+        // setMovies((prevstate) => [...prevstate, ...data.results]);
+        setMovies(data.results)
+
+        // setMovies(data.results)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+    }
+  
+
+  const loadMore = (callback) => {
+    setPage((prevstate) => prevstate + 1);
+
+    callback(page, myId)
+  };
+
+
 
 
   // ! Toggling Modal states
@@ -64,11 +79,17 @@ function Category() {
   //! Changing Category Title
   const [current, setCurrent] = useState('ACTION')
 
-  const changeCategoryTitle = (title, id,  callback) => {
+  const changeCategoryTitle = (title, id, callback) => {
+    
     setCurrent(title)
+    setMyId(id)
+    
 
-    callback(page, id)
+    callback(id)
+    
   }
+
+  console.log(myId)
 
 
   let imgPref = "https://image.tmdb.org/t/p/original/"
@@ -118,6 +139,7 @@ function Category() {
           return(
             <button id='button' className='bg-black relative text-white lg:h-[20rem] h-[10rem] lg:flex-[1] lg:flex [writing-mode:vertical-lr] active:text-white flex justify-center items-center font-sans font-medium uppercase text-sm' key={button.id} 
             onClick={() => changeCategoryTitle(button.name, button.id, fetchData)}
+            // onClick={() => fetchData(page, button.id)}
             >
               <div id='textWrapper' className='absolute z-10 h-full w-full flex justify-start pt-6 items-center rotate-180'><p className='font-bold lg:font-sans lg:text-3xl lg:font-bold '>{button.name}</p></div>
               <img id='image' className='h-full absolute cursor-pointer w-[100%] object-cover object-center ' src={require('' + button.img)} alt='backgroundPoster' />
@@ -146,6 +168,7 @@ function Category() {
             )
           })}   
         </div>
+
       
         {/* Movies Selection pop-up modal */}
         {modal && 
@@ -168,30 +191,11 @@ function Category() {
         }
 
 
-        {/* Loading animation */}
-        <div className='top-0 w-full grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5 px-6 md:px-16 lg:px-28 absolute z-[1] lg:pt-[148px]'>
-        {arr.map((arr) => {
-          return (
-            <div key={arr} className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between  lg:h-[20rem]'>
-              <div className='h-[90%] w-full bg-neutral-800 flex justify-center items-center'>
-                <div role="status" className="space-y-8 w-full h-full animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
-                  <div className="flex h-full w-full items-center justify-center bg-neutral-500 dark:bg-gray-800">
-                    <svg className="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                        <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z"/>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )
-        })}
+        {/* More page Button */}
+        <div className='flex items-center w-full justify-center mt-24 gap-8 px-6 md:px-16 lg:px-28'>
+          {/* <button onClick={() => prevPage(fetchPrevMovies)} className='transition ease-in-out h-16 w-[50%] font-sans rounded text-black font-bold border border-yellow-1 bg-yellow-1 hover:bg-white hover:border-white text-xl px-5 md:text-2xl lg:text-2xl'> Previous Page </button> */}
+          <button className='transition ease-in-out h-16 w-[50%] font-sans rounded text-black font-bold border border-yellow-1 bg-yellow-1 hover:bg-white hover:border-white text-xl px-5 md:text-2xl lg:text-2xl' onClick={() =>  loadMore(fetchNextData)} disabled={page > 20 ? true: false}> Next Page </button>
         </div> 
-
-          {/* More page Button */}
-          <div className='flex items-center w-full justify-center mt-24 gap-8 px-6 md:px-16 lg:px-28'>
-            {/* <button onClick={() => prevPage(fetchPrevMovies)} className='transition ease-in-out h-16 w-[50%] font-sans rounded text-black font-bold border border-yellow-1 bg-yellow-1 hover:bg-white hover:border-white text-xl px-5 md:text-2xl lg:text-2xl'> Previous Page </button> */}
-            <button className='transition ease-in-out h-16 w-[50%] font-sans rounded text-black font-bold border border-yellow-1 bg-yellow-1 hover:bg-white hover:border-white text-xl px-5 md:text-2xl lg:text-2xl' onClick={loadMore} disabled={page > 15 ? true: false}> Next Page </button>
-          </div> 
       </div>
     </section>
   )
