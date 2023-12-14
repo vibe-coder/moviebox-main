@@ -67,7 +67,7 @@ function Nav() {
   } 
 
   return (
-    <section id="section"  className='fixed bg-blurTransparent backdrop-blur-2xl border-b-[1px] border-b-borderGrey z-[40] right-0 left-0 h-28 flex justify-center items-center'>
+    <section id="section"  className='fixed bg-blurTransparent backdrop-blur-sm border-b-[1px] border-b-borderGrey z-[40] right-0 left-0 h-28 flex justify-center items-center'>
       <div className='w-full h-[50%]'>
         {/*  */}
         <nav id='navs' className="w-full flex gap-4 justify-between items-center px-6 md:gap-8 md:px-16 lg:px-28 relative z-[15]">
@@ -78,7 +78,7 @@ function Nav() {
           </Link>
           <label className="relative block w-full md:w-50 lg:w-[500px]">
             {/* <span class="sr-only">Search</span> */}
-            <input onClick={() => setFocus(!focus)} onChange={displayInput} id='searchInput'  className="placeholder:italic h-10 placeholder:text-slate-400 block text-white w-full bg-transparentWhite border-slate-300 py-2 pl-4 pr-12 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm focus:bg-transparentWhite hover:bg-transparentWhite" placeholder="Search for anything..." type="text" name="search"/>
+            <input onClick={() => setFocus(!focus)} onChange={displayInput} id='searchInput'  className="placeholder:italic placeholder-white h-10 placeholder:text-slate-400 block text-white w-full bg-transparentWhite border-slate-300 py-2 pl-4 pr-12 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm focus:bg-transparentWhite hover:bg-transparentWhite" placeholder="Search for anything..." type="text" name="search"/>
             <span className="absolute inset-y-0 right-0 flex items-center pr-4">
               <i className="las la-search 64px text-white scale-x-[-1]"></i>
             </span>

@@ -31,7 +31,7 @@ module.exports = {
       'transparentNeutral-2': 'rgba(0, 0, 0, .8)',
       'transparentNeutral-3': 'rgba(0, 0, 0, .5)',
       'transparentWhite':'rgba(225, 225, 225, .2)',
-      'blurTransparent':'rgba( 255, 255, 255, 0.15 )',
+      'blurTransparent':'rgba( 255, 255, 255,0 )',
       'borderGrey':'rgba( 255, 255, 255, 0.18)'
     },
     
