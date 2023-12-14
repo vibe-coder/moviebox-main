@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect, useState} from 'react';
 // import DynamicPage from '../../../components/DynamicPage';
-import star from "../star-02.png"
+// import star from "../star-02.png"
 
 const Section1 = () => {
 
@@ -100,7 +100,7 @@ const Section1 = () => {
                     {/* Rating */}
                     <div className='my-6 text-white flex gap-4 items-center'>
                       <div className='border-2 border-yellow-1 w-12 rounded flex justify-center items-center md:h-9 md:w-14'>{Math.round(data.vote_average * 10) / 10}</div>
-                      <img src={star} alt="star" className='h-5 w-5' />
+                      {/* <img src={star} alt="star" className='h-5 w-5' /> */}
                     </div>
                     {/* Button Wrapper */}
                     <div className='flex gap-4 flex-wrap items-center'>
