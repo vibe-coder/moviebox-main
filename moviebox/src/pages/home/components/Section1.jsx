@@ -33,7 +33,7 @@ const Section1 = () => {
 
   const [movieData, setMovieData] = useState([])
   const [index, setIndex] = React.useState(0);
-  const delay = 2500;
+  const delay = 6500;
 
   // Fetching Data and looping through them
   function fetchData(){
@@ -78,7 +78,7 @@ const Section1 = () => {
       <div className="slideshowSlider z-10 relative w-full h-full whitespace-nowrap overflow-hidden no-scrollbar" >
         {movieData.map((data) => {
           return(
-            <div key={data.id} style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }} className='relative w-full h-screen inline-block transition ease-in-out duration-[1000ms]'>
+            <div key={data.id} style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }} className='relative w-full h-screen inline-block transition ease-in-out duration-[2000ms]'>
               <div key={index}>
                 <img src = {imgPref + data.backdrop_path} alt='background' className='absolute w-screen h-screen object-cover object-center'/>
 
