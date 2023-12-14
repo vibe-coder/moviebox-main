@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState} from 'react';
 // import DynamicPage from '../../../components/DynamicPage';
+import star from "../star-02.png"
 
 const Section1 = () => {
 
@@ -70,6 +71,11 @@ const Section1 = () => {
   );
 
 
+  const alertUser = () => {
+    alert("This is a demo button")
+  }
+
+
 
   let imgPref = "https://image.tmdb.org/t/p/original/"
 
@@ -88,19 +94,20 @@ const Section1 = () => {
                     {/* Title */}
                     <h1 className='text-white font-bold font-sans text-4xl m-0 md:text-7xl text-ellipsis whitespace-pre-wrap overflow-hidden line-clamp-2'>{data.original_title}</h1>
                     {/* Description */}
-                    <p className='font-sans text-sm m-0 text-neutral-400 md:text-xl'>{data.genre_ids} | {data.release_date}</p>
+                    <p className='font-sans text-sm m-0 text-yellow-1 md:text-xl'>{data.release_date}</p>
                     {/* Overview */}
                     <p className='text-white text-sm font-sans mt-5 font-hairline md:text-lg '>{data.overview}</p>
                     {/* Rating */}
-                    <div className='my-6 text-white'>
-                      <div className='border-2 border-yellow-1 w-12 rounded flex justify-center items-center md:h-9 md:w-14'>{data.vote_average}</div>
+                    <div className='my-6 text-white flex gap-4 items-center'>
+                      <div className='border-2 border-yellow-1 w-12 rounded flex justify-center items-center md:h-9 md:w-14'>{Math.round(data.vote_average * 10) / 10}</div>
+                      <img src={star} alt="star" className='h-5 w-5' />
                     </div>
                     {/* Button Wrapper */}
-                    <div className='flex gap-4 flex-wrap'>
-                      <button className='transition ease-in-out h-8 w-28 rounded text-black font-medium border border-yellow-1 hover:-translate-y-1 bg-yellow-1 hover:bg-white hover:border-white duration-200 md:h-11 md:w-32'>Watch Trailer</button>
-                      <button className='transition ease-in-out h-8 w-28 rounded text-white border-2 border-white bg-transparent hover:border-yellow-1 hover:text-yellow-1 hover:-translate-y-1 duration-200 md:h-11 md:w-32'>View Info</button>
-                      <button className='transition ease-in-out h-8 rounded text-white bg-transparent hover:text-yellow-1 hover:-translate-y-1 duration-200 md:h-11'>+ Favorites</button>
-                      {/* <button className='h-8 rounded text-white bg-transparent hover:text-yellow-1'><i className="las la-ellipsis-v"></i></button> */}
+                    <div className='flex gap-4 flex-wrap items-center'>
+                      <button onClick={alertUser} className='transition ease-in-out h-8 w-28 rounded text-black font-medium border border-yellow-1 hover:-translate-y-1 bg-yellow-1 hover:bg-white hover:border-white duration-200 md:h-11 md:w-32'>Watch Trailer</button>
+                      <button onClick={alertUser} className='transition ease-in-out h-8 w-28 rounded text-white border-2 border-white bg-transparent hover:border-yellow-1 hover:text-yellow-1 hover:-translate-y-1 duration-200 md:h-11 md:w-32'>View Info</button>
+                      <button onClick={alertUser} className='transition ease-in-out h-8 rounded text-white bg-transparent hover:text-yellow-1 hover:-translate-y-1 duration-200 md:h-11'>+ Favorites</button>
+                      <button onClick={alertUser} className='h-8 rounded text-white bg-transparent hover:text-yellow-1'><i className="las la-ellipsis-v"></i></button>
                     </div>
                   </div>
                 </div>
