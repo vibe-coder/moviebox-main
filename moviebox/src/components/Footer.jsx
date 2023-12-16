@@ -1,5 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import linkedin from "../images/linkedin.svg"
+import twitter from "../images/twitter.svg"
+import linktag from "../images/link.png"
+// import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 
 
 function Footer() {
@@ -13,13 +18,16 @@ function Footer() {
         </Link>
 
         {/* Socials */}
-        <div className='text-center mb-12 flex gap-5 justify-center'>
-          <a href="/"><i className="lab la-facebook-f text-white"></i></a>
-          <a href="/"><i className="lab la-twitter text-white"></i></a>
-          <a href="/"><i className="lab la-pinterest-p text-white"></i></a>
-          <a href="/"><i className="lab la-instagram text-white"></i></a>
-          <a href="/"><i className="lab la-youtube text-white"></i></a>
-          
+        <div className='text-center mb-12 flex gap-8 justify-center'>
+          <a href="https://www.linkedin.com/in/david-irinyemi-395220162" target="_blank">
+            <img src={linkedin} alt="linkedin" className='h-5 w-5 opacity-50 hover:opacity-100 transition ease-in-out duration-150'/>
+          </a>
+          <a href="https://twitter.com/vibe_coder" target="_blank">
+            <img src={twitter} alt="twitter" className='h-5 w-5 opacity-50 hover:opacity-100 transition ease-in-out duration-150'/>
+          </a>
+          <a href="https://vibe-coder.netlify.app/" target="_blank">
+            <img src={linktag} alt="link" className='h-5 w-5 opacity-50 hover:opacity-100 transition ease-in-out duration-150' />
+          </a>
         </div>
 
         {/* Credits */}
