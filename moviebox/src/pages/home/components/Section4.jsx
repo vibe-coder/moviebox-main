@@ -65,7 +65,7 @@ function Section4() {
               <div className='flex col-span-1 w-full' key={index}>
                 {/* Picture */}
                 <div className='w-[300px] relative h-[180px] md:h-[230px] bg-metal'>
-                  <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={imgPref + data.profile_path} alt='ImgFiller' />
+                  <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={imgPref + data.profile_path} alt='PERSON_IMAGE' />
                   <img className='absolute h-full cursor-pointer w-full object-cover object-center' src={bgPoster} alt='backgroundPoster'/>
                 </div>
                 {/* Info */}
@@ -96,7 +96,7 @@ function Section4() {
             <div key={data} className='flex col-span-1 w-full'>
               {/* Picture */}
               <div className='w-[300px] relative h-[180px] md:h-[230px] bg-metal'>
-                <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={bgPoster} alt='ImgFiller' />
+                <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={bgPoster} alt='Img' />
                 <img className='absolute h-full cursor-pointer w-full object-cover object-center' src={bgPoster} alt='backgroundPoster'/>
               </div>
               {/* Info */}
