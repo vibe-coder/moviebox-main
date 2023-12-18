@@ -19,13 +19,13 @@ function Footer() {
 
         {/* Socials */}
         <div className='text-center mb-12 flex gap-8 justify-center'>
-          <a href="https://www.linkedin.com/in/david-irinyemi-395220162" target="_blank">
+          <a href="https://www.linkedin.com/in/david-irinyemi-395220162" role='noreferrer' target="_blank">
             <img src={linkedin} alt="linkedin" className='h-5 w-5 opacity-50 hover:opacity-100 transition ease-in-out duration-150'/>
           </a>
-          <a href="https://twitter.com/vibe_coder" target="_blank">
+          <a href="https://twitter.com/vibe_coder" role='noreferrer' target="_blank">
             <img src={twitter} alt="twitter" className='h-5 w-5 opacity-50 hover:opacity-100 transition ease-in-out duration-150'/>
           </a>
-          <a href="https://vibe-coder.netlify.app/" target="_blank">
+          <a href="https://vibe-coder.netlify.app/" role='noreferrer' target="_blank">
             <img src={linktag} alt="link" className='h-5 w-5 opacity-50 hover:opacity-100 transition ease-in-out duration-150' />
           </a>
         </div>
