@@ -21,6 +21,7 @@ function Section4() {
         .then((data) => {
           console.log(data.results)
           let newPeople = data.results
+          console.log(newPeople)
           setPeople(newPeople)
         })
         .catch((error) => console.log(error))
@@ -75,7 +76,7 @@ function Section4() {
                     <p className='text-neutral-300 font-medium'>Works:</p>
                     {data.known_for.map((data) => {
                       return(
-                        <ul className='list-disc text-neutral-400 pl-4'>
+                        <ul key={data.id} className='list-disc text-neutral-400 pl-4'>
                           <li>{data.title}</li>
                         </ul>
                       )
@@ -92,7 +93,7 @@ function Section4() {
       {
         arr.map((data) => {
           return(
-            <div className='flex col-span-1 w-full'>
+            <div key={data} className='flex col-span-1 w-full'>
               {/* Picture */}
               <div className='w-[300px] relative h-[180px] md:h-[230px] bg-metal'>
                 <img className='absolute  z-10 h-full cursor-pointer w-full object-cover object-center' id="HideImg" src={bgPoster} alt='ImgFiller' />
