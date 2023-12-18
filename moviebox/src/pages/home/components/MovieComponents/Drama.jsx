@@ -108,11 +108,11 @@ function Drama() {
       <div className='relative top-0 w-full grid grid-cols-2 gap-x-4 gap-y-11 md:grid-cols-3 lg:grid-cols-6 lg:gap-x-5'>
         {arr.map((arr) => {
           return (
-            <div className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between  lg:h-[20rem]'>
+            <div key={arr} className=' h-[19rem] w-[100%] md:h-[20rem] flex-col justify-between  lg:h-[20rem]'>
               <div className='h-[90%] w-full bg-neutral-800 flex justify-center items-center'>
                 <div role="status" className="space-y-8 w-full h-full animate-pulse md:space-y-0 md:space-x-8 rtl:space-x-reverse md:flex md:items-center">
                   <div className="flex h-full w-full items-center justify-center bg-neutral-500 dark:bg-gray-800">
-                    <svg class="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                    <svg className="w-10 h-10 text-gray-200 dark:text-gray-600" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
                         <path d="M18 0H2a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2Zm-5.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Zm4.376 10.481A1 1 0 0 1 16 15H4a1 1 0 0 1-.895-1.447l3.5-7A1 1 0 0 1 7.468 6a.965.965 0 0 1 .9.5l2.775 4.757 1.546-1.887a1 1 0 0 1 1.618.1l2.541 4a1 1 0 0 1 .028 1.011Z"/>
                     </svg>
                   </div>
