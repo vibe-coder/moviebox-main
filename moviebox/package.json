@@ -13,7 +13,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.16.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^3.0.1",
     "sass": "^1.69.2",
     "web-vitals": "^2.1.4"
   },
@@ -43,5 +43,20 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.3"
-  }
+  },
+  "description": "noviebox project",
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vibe-coder/moviebox-main.git"
+  },
+  "keywords": [
+    "moviebox"
+  ],
+  "author": "David Irinyemi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vibe-coder/moviebox-main/issues"
+  },
+  "homepage": "https://github.com/vibe-coder/moviebox-main#readme"
 }
